@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="meta.title.contact">Contact | LeBonAuto Divatte-sur-Loire</title>
+<meta name="description" content="Contactez LeBonAuto : 06 52 24 22 78, contact@lebonauto.fr, 8 Rue de l'industrie Divatte-sur-Loire. Réponse en moins d'1h.">
+<link rel="icon" type="image/png" href="assets/img/logo.png">
+<link rel="stylesheet" href="assets/css/style.css?v=22"></head>
+<body>
+<header class="header"><div class="container nav">
+<a class="brand" href="index.html"><img src="assets/img/logo.png" alt="LeBonAuto — Divatte-sur-Loire"></a>
+<nav class="links"><a href="index.html" data-i18n="nav.home">Accueil</a><a href="catalogue.html" data-i18n="nav.catalogue">Catalogue</a><a href="a-propos.html" data-i18n="nav.about">À propos</a><a class="active" href="contact.html" data-i18n="nav.contact">Contact</a><a href="blog.html" data-i18n="nav.blog">Blog</a><a href="faq.html" data-i18n="nav.faq">FAQ</a></nav>
+<a class="btn btn-primary nav-cta" href="catalogue.html" data-i18n="nav.cta.cars">Voir nos véhicules</a>
+<div class="lang-switcher"></div>
+<button class="burger" aria-label="menu"><svg class="ic" viewBox="0 0 24 24" style="width:26px;height:26px"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button></div></header>
+<section class="section"><div class="container">
+<h1 data-i18n="c.title">Contactez-nous</h1><p class="sub" data-i18n="c.sub">Une question ? On vous aide à trouver le véhicule parfait. Réponse en moins d'1h ouvrée.</p>
+<div class="two">
+<div class="form">
+<form onsubmit="return handleContact(event)">
+<label data-i18n="form.name">Nom</label><input name="nom" required data-i18n-ph="form.name.ph" placeholder="Votre nom">
+<label data-i18n="form.tel">Téléphone</label><input name="tel" required placeholder="06 ...">
+<label data-i18n="form.subject">Sujet</label><select name="sujet"><option data-i18n="subj.1">Acheter un véhicule</option><option data-i18n="subj.2">Financement</option><option data-i18n="subj.3">Livraison</option><option data-i18n="subj.4">Autre</option></select>
+<label data-i18n="form.msg">Message</label><textarea name="message" rows="4" data-i18n-ph="form.msg.ph" placeholder="Bonjour, je cherche..."></textarea>
+<button class="btn btn-whatsapp" type="submit" style="width:100%;justify-content:center"><svg class="ic"><use href="#i-chat"/></svg><span data-i18n="form.send">Envoyer via WhatsApp</span></button>
+<p id="form-ok" style="display:none;color:green;font-weight:700"><span class="ok" data-i18n="form.ok">Message prêt dans WhatsApp, on vous répond vite.</span></p>
+</form></div>
+<div>
+<div class="service"><h3 data-i18n="info.title">Contacts directs</h3><p><svg class="ic gold"><use href="#i-mail"/></svg> contact@lebonauto.fr<br><svg class="ic gold"><use href="#i-chat"/></svg> WhatsApp : <a href="https://wa.me/33652242278">06 52 24 22 78</a><br><svg class="ic gold"><use href="#i-phone"/></svg> Appel : <a href="tel:+33652242278">06 52 24 22 78</a></p>
+<p><svg class="ic gold"><use href="#i-pin"/></svg> 8 Rue de l'industrie, 44450 Divatte-sur-Loire<br><svg class="ic gold"><use href="#i-clock"/></svg> 09h – 18h · <svg class="ic gold"><use href="#i-eye"/></svg> <b data-visitors>18</b> <span data-i18n="topbar.online">visiteurs en ligne</span></p>
+<div class="hero-cta"><a class="btn btn-dark" href="tel:+33652242278" data-i18n="cta.call2">Appeler</a><a class="btn btn-ghost" style="color:#0A1E3C;border-color:#0A1E3C" href="mailto:contact@lebonauto.fr" data-i18n="cta.mail">Email</a></div></div>
+<iframe class="map" style="margin-top:1rem" src="https://www.openstreetmap.org/export/embed.html?bbox=-1.35%2C47.22%2C-1.15%2C47.32&layer=mapnik&marker=47.27%2C-1.25" loading="lazy"></iframe>
+</div>
+</div></div></section>
+<footer class="footer"><div class="container footer-grid">
+<div><h4 data-i18n="footer.brand">LEBONAUTO</h4><p data-i18n="footer.desc">Votre destination de confiance pour des véhicules de qualité premium. Plus de 6 ans d'expérience.</p><p><a href="mailto:contact@lebonauto.fr"><svg class="ic gold"><use href="#i-mail"/></svg> contact@lebonauto.fr</a><br><a href="https://wa.me/33652242278"><svg class="ic gold"><use href="#i-chat"/></svg> WhatsApp : 06 52 24 22 78</a><br><svg class="ic gold"><use href="#i-pin"/></svg> 8 Rue de l'industrie, 44450 Divatte-sur-Loire<br>SIREN : 929 713 873</p></div>
+<div><h4 data-i18n="footer.nav">Navigation</h4><p><a href="index.html" data-i18n="nav.home">Accueil</a><br><a href="catalogue.html" data-i18n="nav.catalogue">Catalogue</a><br><a href="a-propos.html" data-i18n="nav.about">À propos</a><br><a href="contact.html" data-i18n="nav.contact">Contact</a><br><a href="blog.html" data-i18n="nav.blog">Blog</a><br><a href="faq.html" data-i18n="nav.faq">FAQ</a></p></div>
+<div><h4 data-i18n="footer.hours">Horaires</h4><p><span data-i18n="footer.h1">Lun – Ven : 9h – 18h</span><br><span data-i18n="footer.h2">Sam : sur rendez-vous</span><br><span data-i18n="footer.h3">Dim : fermé</span></p></div>
+<div><h4 data-i18n="footer.contact">Contact rapide</h4><p><a class="btn btn-primary" href="contact.html" data-i18n="footer.quote">Demander un devis</a></p><p style="margin-top:.6rem"><a href="tel:+33652242278"><svg class="ic gold"><use href="#i-phone"/></svg> 06 52 24 22 78</a></p></div>
+</div><div class="container bottom"><span>© <span data-year>2026</span> LeBonAuto — <span data-i18n="footer.rights">Tous droits réservés.</span></span><span><a href="#" data-i18n="footer.cgu">Conditions générales</a> · <a href="#" data-i18n="footer.legal">Mentions légales</a></span></div></footer>
+<a class="floating-wa" href="https://wa.me/33652242278" aria-label="WhatsApp"><svg class="ic"><use href="#i-chat"/></svg></a>
+<script src="assets/js/i18n.js?v=22"></script>
+<script src="assets/js/main.js?v=22"></script>
+</body></html>

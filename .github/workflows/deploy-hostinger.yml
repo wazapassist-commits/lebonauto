@@ -1,0 +1,25 @@
+# Déploiement automatique vers Hostinger à chaque push sur main.
+# Requis : secrets FTP_SERVER / FTP_USERNAME / FTP_PASSWORD (Settings → Secrets and variables → Actions).
+name: Deploy to Hostinger
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # Le compte FTP est jailé à la racine web : /public_html n'existe pas ici
+          server-dir: /
+          # sans point devant : Hostinger purge les dotfiles, ce qui cassait la synchro différentielle
+          state-name: ftp-deploy-sync-state.json
+          exclude: |
+            **/.git*/**
+            **/.git*

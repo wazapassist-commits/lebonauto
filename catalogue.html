@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="meta.title.catalogue">Catalogue véhicules d'occasion | LeBonAuto Divatte-sur-Loire</title>
+<meta name="description" content="Catalogue LeBonAuto : citadines, SUV, berlines, sportives d'occasion contrôlées. Filtrez par prix, carburant, année. Divatte-sur-Loire près de Nantes.">
+<link rel="icon" type="image/png" href="assets/img/logo.png">
+<link rel="stylesheet" href="assets/css/style.css?v=22"></head>
+<body>
+<div class="topbar"><span data-i18n="topbar.deals">Réductions exclusives</span> — <strong><span data-visitors>18</span> <span data-i18n="topbar.online">visiteurs en ligne</span></strong></div>
+<header class="header"><div class="container nav">
+<a class="brand" href="index.html"><img src="assets/img/logo.png" alt="LeBonAuto — Divatte-sur-Loire"></a>
+<nav class="links"><a href="index.html" data-i18n="nav.home">Accueil</a><a class="active" href="catalogue.html" data-i18n="nav.catalogue">Catalogue</a><a href="a-propos.html" data-i18n="nav.about">À propos</a><a href="contact.html" data-i18n="nav.contact">Contact</a><a href="blog.html" data-i18n="nav.blog">Blog</a><a href="faq.html" data-i18n="nav.faq">FAQ</a></nav>
+<a class="btn btn-primary nav-cta" href="contact.html" data-i18n="nav.cta.contact">Nous contacter</a>
+<div class="lang-switcher"></div>
+<button class="burger" aria-label="menu"><svg class="ic" viewBox="0 0 24 24" style="width:26px;height:26px"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button></div></header>
+<section class="section"><div class="container">
+<p class="kicker"><span id="kicker-n">80</span> <span data-i18n="cat.kicker">véhicules disponibles</span></p>
+<h1 data-i18n="cat.title">Notre catalogue</h1><p class="sub" id="count"></p>
+<div class="search-zone">
+<div class="search-bar">
+<svg class="ic"><use href="#i-search"/></svg>
+<input id="q" data-i18n-ph="filters.search" placeholder="Rechercher un véhicule…">
+<button class="btn btn-dark" id="filter-toggle" aria-expanded="false" data-i18n-aria="filters.title"><svg class="ic" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg><span data-i18n="filters.title">Filtres</span><span class="fcount" id="fcount"></span></button>
+</div>
+<div class="quick-pills" id="quick-pills"></div>
+<div class="filters-row">
+<p class="sub" id="count"></p>
+<label class="sort-wrap"><span data-i18n="f.sortBy">Trier par</span><select id="sort"><option value="" data-i18n="filters.sort.rel">Trier : pertinence</option><option value="asc" data-i18n="filters.sort.asc">Prix croissant</option><option value="desc" data-i18n="filters.sort.desc">Prix décroissant</option><option value="km" data-i18n="filters.sort.km">Faible kilométrage</option><option value="year" data-i18n="filters.sort.year">Plus récent</option></select></label>
+</div>
+</div>
+<div class="veh-grid" id="grid"></div>
+<div class="filters-modal-back" id="filters-modal">
+<div class="filters-modal" role="dialog" aria-modal="true" aria-labelledby="fm-title">
+<div class="fm-head"><h2 id="fm-title" data-i18n="filters.title">Filtres</h2><button class="fm-close" id="fm-close" data-i18n-aria="f.close" aria-label="Fermer">×</button></div>
+<div class="fm-grid">
+<div><label class="flabel" for="f-marque" data-i18n="f.brand">Marque</label><select id="f-marque"></select></div>
+<div><label class="flabel" for="f-modele" data-i18n="f.model">Modèle</label><select id="f-modele"></select></div>
+<div><label class="flabel" for="f-prix-min" data-i18n="f.priceMin">Prix minimum</label><input id="f-prix-min" type="number" min="0" step="500" placeholder="€"></div>
+<div><label class="flabel" for="f-prix-max" data-i18n="f.priceMax">Prix maximum</label><input id="f-prix-max" type="number" min="0" step="500" placeholder="€"></div>
+<div><label class="flabel" for="f-annee-min" data-i18n="f.yearMin">Année minimum</label><input id="f-annee-min" type="number" min="2000" max="2030" placeholder="AAAA"></div>
+<div><label class="flabel" for="f-annee-max" data-i18n="f.yearMax">Année maximum</label><input id="f-annee-max" type="number" min="2000" max="2030" placeholder="AAAA"></div>
+<div><label class="flabel" for="f-km-max" data-i18n="f.kmMax">Kilométrage maximum</label><input id="f-km-max" type="number" min="0" step="5000" placeholder="km"></div>
+<div class="full"><label class="flabel" data-i18n="f.fuel">Carburant</label><div class="pill-group" id="f-fuels"></div></div>
+<div class="full"><label class="flabel" data-i18n="f.gear">Boîte de vitesses</label><div class="pill-group" id="f-gears"></div></div>
+<div class="full"><label class="flabel" data-i18n="f.body">Type de carrosserie</label><div class="pill-group" id="f-body"></div></div>
+</div>
+<div class="fm-foot">
+<button class="btn btn-outline" id="fm-reset" data-i18n="filters.reset">Réinitialiser</button>
+<button class="btn btn-primary" id="fm-apply" data-i18n="f.apply">Appliquer les filtres</button>
+</div>
+</div>
+</div>
+</div></section>
+<footer class="footer"><div class="container footer-grid">
+<div><h4 data-i18n="footer.brand">LEBONAUTO</h4><p data-i18n="footer.desc">Votre destination de confiance pour des véhicules de qualité premium. Plus de 6 ans d'expérience.</p><p><a href="mailto:contact@lebonauto.fr"><svg class="ic gold"><use href="#i-mail"/></svg> contact@lebonauto.fr</a><br><a href="https://wa.me/33652242278"><svg class="ic gold"><use href="#i-chat"/></svg> WhatsApp : 06 52 24 22 78</a><br><svg class="ic gold"><use href="#i-pin"/></svg> 8 Rue de l'industrie, 44450 Divatte-sur-Loire<br>SIREN : 929 713 873</p></div>
+<div><h4 data-i18n="footer.nav">Navigation</h4><p><a href="index.html" data-i18n="nav.home">Accueil</a><br><a href="catalogue.html" data-i18n="nav.catalogue">Catalogue</a><br><a href="a-propos.html" data-i18n="nav.about">À propos</a><br><a href="contact.html" data-i18n="nav.contact">Contact</a><br><a href="blog.html" data-i18n="nav.blog">Blog</a><br><a href="faq.html" data-i18n="nav.faq">FAQ</a></p></div>
+<div><h4 data-i18n="footer.hours">Horaires</h4><p><span data-i18n="footer.h1">Lun – Ven : 9h – 18h</span><br><span data-i18n="footer.h2">Sam : sur rendez-vous</span><br><span data-i18n="footer.h3">Dim : fermé</span></p></div>
+<div><h4 data-i18n="footer.contact">Contact rapide</h4><p><a class="btn btn-primary" href="contact.html" data-i18n="footer.quote">Demander un devis</a></p><p style="margin-top:.6rem"><a href="tel:+33652242278"><svg class="ic gold"><use href="#i-phone"/></svg> 06 52 24 22 78</a></p></div>
+</div><div class="container bottom"><span>© <span data-year>2026</span> LeBonAuto — <span data-i18n="footer.rights">Tous droits réservés.</span></span><span><a href="#" data-i18n="footer.cgu">Conditions générales</a> · <a href="#" data-i18n="footer.legal">Mentions légales</a></span></div></footer>
+<a class="floating-wa" href="https://wa.me/33652242278" aria-label="WhatsApp"><svg class="ic"><use href="#i-chat"/></svg></a>
+<script src="assets/js/i18n.js?v=22"></script><script src="assets/js/sb-config.js?v=22"></script><script src="assets/js/sb.js?v=22"></script><script src="assets/js/vehicles.js?v=22"></script><script src="assets/js/main.js?v=22"></script>
+<script>
+function T(k){ try{ return window.LBA_I18N.t(k); }catch(e){ return k; } }
+var FUELS_ALL = ['Essence','Diesel','Hybride','Électrique'];
+var GEARS_ALL = ['Automatique','Manuelle'];
+var FUELKEY = {Essence:'petrol',Diesel:'diesel',Hybride:'hybrid','Électrique':'electric'};
+var state = { q:'', quick:'', sort:'', f:{marque:'',modele:'',pmin:'',pmax:'',amin:'',amax:'',kmax:''}, fuels:new Set(), gears:new Set(), body:new Set() };
+var draft = { fuels:new Set(), gears:new Set(), body:new Set() };
+function fuelLabel(f){ try{ return window.LBA_I18N.t('filters.fuel.'+FUELKEY[f]); }catch(e){ return f; } }
+function distinctCats(){ var seen={}, out=[]; VEHICLES.forEach(function(v){ if(v.cat && !seen[v.cat]){ seen[v.cat]=1; out.push(v.cat); } }); return out; }
+function marques(){ return Array.from(new Set(VEHICLES.map(function(v){ return v.marque; }).filter(Boolean))).sort(function(a,b){ return a.localeCompare(b); }); }
+function modeles(marque){
+  return VEHICLES.filter(function(v){ return !marque || v.marque===marque; })
+    .map(function(v){ return v.modele; }).filter(function(m,i,a){ return m && a.indexOf(m)===i; })
+    .sort(function(a,b){ return a.localeCompare(b); });
+}
+function fillSelect(id, items, cur, allLabel){
+  var s = document.getElementById(id);
+  s.innerHTML = '<option value="">'+allLabel+'</option>' + items.map(function(m){
+    return '<option value="'+m.replace(/"/g,'&quot;')+'"'+(m===cur?' selected':'')+'>'+m+'</option>';
+  }).join('');
+}
+function pill(containerId, items, selSet, labelFn){
+  var c = document.getElementById(containerId);
+  c.innerHTML = '';
+  items.forEach(function(it){
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'pill' + (selSet.has(it) ? ' on' : '');
+    b.textContent = labelFn ? labelFn(it) : it;
+    b.setAttribute('aria-pressed', selSet.has(it) ? 'true' : 'false');
+    b.addEventListener('click', function(){
+      if(selSet.has(it)) selSet.delete(it); else selSet.add(it);
+      b.classList.toggle('on');
+      b.setAttribute('aria-pressed', selSet.has(it) ? 'true' : 'false');
+    });
+    c.appendChild(b);
+  });
+}
+function buildFilterUI(){
+  fillSelect('f-marque', marques(), state.f.marque, T('f.allBrands'));
+  fillSelect('f-modele', modeles(state.f.marque), state.f.modele, T('f.allModels'));
+  var cats = distinctCats();
+  var qp = document.getElementById('quick-pills');
+  qp.innerHTML = '';
+  [{v:'',l:T('filters.all')}].concat(cats.map(function(c){ return {v:c,l:c}; })).forEach(function(o){
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'qpill' + (state.quick===o.v ? ' on' : '');
+    b.textContent = o.l;
+    b.addEventListener('click', function(){ state.quick = o.v; render(); syncQuick(); });
+    qp.appendChild(b);
+  });
+  pill('f-fuels', FUELS_ALL, draft.fuels, fuelLabel);
+  pill('f-gears', GEARS_ALL, draft.gears, null);
+  pill('f-body', cats, draft.body, null);
+}
+function syncQuick(){
+  Array.prototype.forEach.call(document.getElementById('quick-pills').children, function(b, i){
+    b.classList.toggle('on', (i===0 && !state.quick) || b.textContent === state.quick);
+  });
+}
+function syncPanelFromState(){
+  document.getElementById('f-marque').value = state.f.marque;
+  fillSelect('f-modele', modeles(state.f.marque), state.f.modele, T('f.allModels'));
+  document.getElementById('f-prix-min').value = state.f.pmin;
+  document.getElementById('f-prix-max').value = state.f.pmax;
+  document.getElementById('f-annee-min').value = state.f.amin;
+  document.getElementById('f-annee-max').value = state.f.amax;
+  document.getElementById('f-km-max').value = state.f.kmax;
+  draft.fuels = new Set(state.fuels); draft.gears = new Set(state.gears); draft.body = new Set(state.body);
+  pill('f-fuels', FUELS_ALL, draft.fuels, fuelLabel);
+  pill('f-gears', GEARS_ALL, draft.gears, null);
+  pill('f-body', distinctCats(), draft.body, null);
+}
+function openModal(){
+  syncPanelFromState();
+  var m = document.getElementById('filters-modal');
+  m.classList.add('open');
+  document.getElementById('filter-toggle').setAttribute('aria-expanded','true');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(){
+  document.getElementById('filters-modal').classList.remove('open');
+  document.getElementById('filter-toggle').setAttribute('aria-expanded','false');
+  document.body.style.overflow = '';
+}
+function activeCount(){
+  var n = 0;
+  if(state.q.trim()) n++;
+  if(state.quick) n++;
+  if(state.f.marque) n++;
+  if(state.f.modele) n++;
+  if(state.f.pmin !== '') n++;
+  if(state.f.pmax !== '') n++;
+  if(state.f.amin !== '') n++;
+  if(state.f.amax !== '') n++;
+  if(state.f.kmax !== '') n++;
+  if(state.fuels.size && state.fuels.size < FUELS_ALL.length) n++;
+  if(state.gears.size && state.gears.size < GEARS_ALL.length) n++;
+  if(state.body.size && state.body.size < distinctCats().length) n++;
+  return n;
+}
+function render(){
+  var q = state.q.trim().toLowerCase(), F = state.f;
+  var list = VEHICLES.filter(function(v){
+    if(state.quick && v.cat !== state.quick) return false;
+    if(F.marque && v.marque !== F.marque) return false;
+    if(F.modele && v.modele !== F.modele) return false;
+    if(F.pmin !== '' && !(v.prix >= +F.pmin)) return false;
+    if(F.pmax !== '' && !(v.prix <= +F.pmax)) return false;
+    if(F.amin !== '' && !(v.annee && v.annee >= +F.amin)) return false;
+    if(F.amax !== '' && !(v.annee && v.annee <= +F.amax)) return false;
+    if(F.kmax !== '' && !(v.km && v.km <= +F.kmax)) return false;
+    if(state.fuels.size && state.fuels.size < FUELS_ALL.length && !state.fuels.has(v.carburant)) return false;
+    if(state.gears.size && state.gears.size < GEARS_ALL.length && !state.gears.has(v.boite)) return false;
+    if(state.body.size && state.body.size < distinctCats().length && !state.body.has(v.cat)) return false;
+    if(q && ((v.marque+' '+v.modele+' '+(v.version||'')+' '+v.carburant+' '+(v.cat||'')+' '+(v.badge||'')).toLowerCase().indexOf(q) < 0)) return false;
+    return true;
+  });
+  var sort = state.sort;
+  if(sort==='asc') list.sort((a,b)=>a.prix-b.prix); if(sort==='desc') list.sort((a,b)=>b.prix-a.prix);
+  if(sort==='km') list.sort((a,b)=>(a.km||9999999)-(b.km||9999999)); if(sort==='year') list.sort((a,b)=>(b.annee||0)-(a.annee||0));
+  document.getElementById('count').textContent = list.length+' '+T('cat.count');
+  var kn = document.getElementById('kicker-n'); if(kn) kn.textContent = list.length;
+  document.getElementById('grid').innerHTML = list.map(cardHTML).join('') || '<p>'+T('cat.empty')+' <a href="https://wa.me/33652242278">'+T('cat.empty.cta')+'</a>'+T('cat.empty.end')+'</p>';
+  var fc = document.getElementById('fcount'), n = activeCount();
+  fc.textContent = n; fc.classList.toggle('on', n > 0);
+}
+function resetAll(){
+  state = { q:'', quick:'', sort:'', f:{marque:'',modele:'',pmin:'',pmax:'',amin:'',amax:'',kmax:''}, fuels:new Set(), gears:new Set(), body:new Set() };
+  document.getElementById('q').value = '';
+  document.getElementById('sort').value = '';
+  buildFilterUI();
+  render();
+}
+document.getElementById('q').addEventListener('input', function(e){ state.q = e.target.value; render(); });
+document.getElementById('sort').addEventListener('change', function(e){ state.sort = e.target.value; render(); });
+document.getElementById('filter-toggle').addEventListener('click', openModal);
+document.getElementById('fm-close').addEventListener('click', closeModal);
+document.getElementById('filters-modal').addEventListener('click', function(e){ if(e.target.id === 'filters-modal') closeModal(); });
+document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+document.getElementById('f-marque').addEventListener('change', function(e){
+  fillSelect('f-modele', modeles(e.target.value), '', T('f.allModels'));
+});
+document.getElementById('fm-apply').addEventListener('click', function(){
+  state.f.marque = document.getElementById('f-marque').value;
+  state.f.modele = document.getElementById('f-modele').value;
+  state.f.pmin = document.getElementById('f-prix-min').value.trim();
+  state.f.pmax = document.getElementById('f-prix-max').value.trim();
+  state.f.amin = document.getElementById('f-annee-min').value.trim();
+  state.f.amax = document.getElementById('f-annee-max').value.trim();
+  state.f.kmax = document.getElementById('f-km-max').value.trim();
+  state.fuels = new Set(draft.fuels); state.gears = new Set(draft.gears); state.body = new Set(draft.body);
+  render(); closeModal();
+});
+document.getElementById('fm-reset').addEventListener('click', function(){ resetAll(); closeModal(); });
+var p = new URLSearchParams(location.search);
+if(p.get('cat')) state.quick = p.get('cat');
+buildFilterUI();
+render();
+document.addEventListener('lba:lang', function(){ buildFilterUI(); render(); });
+document.addEventListener('lba:data', function(){ buildFilterUI(); render(); });
+</script>
+</body></html>
