@@ -99,7 +99,7 @@ ${g.length>1?'<div class="gal-thumbs" id="gal-thumbs">'+g.map((u,j)=>`<button cl
 <p class="live-line"><span class="dot"></span><b data-visitors>18</b>&nbsp;${T('v.viewing')}</p>
 <p class="desc">${v.desc||''}</p>
 <div class="specs"><div><b>${T('v.year')}</b><span>${an}</span></div><div><b>${T('v.km')}</b><span>${km}</span></div><div><b>${T('v.fuel')}</b><span>${v.carburant||'—'}</span></div><div><b>${T('v.gear')}</b><span>${v.boite||'—'}</span></div><div><b>${T('v.power')}</b><span>${v.puissance||'—'}</span></div><div><b>${T('v.control')}</b><span class="ok">250 points</span></div></div>
-<div class="hero-cta"><a class="btn btn-whatsapp" href="${waLink(v)}"><svg class="ic"><use href="#i-chat"/></svg>${T('v.book')}</a><a class="btn btn-dark" href="tel:+496172123456"><svg class="ic"><use href="#i-phone"/></svg>${T('v.call')}</a></div>
+<div class="hero-cta"><a class="btn btn-whatsapp" href="${waLink(v)}"><svg class="ic"><use href="#i-chat"/></svg>${T('v.book')}</a><a class="btn btn-dark" href="tel:+496172123456"><svg class="ic"><use href="#i-phone"/></svg>${T('v.call')}</a><a class="btn btn-ghost" style="color:#0A1E3C;border-color:#0A1E3C" href="bon-de-commande.html?id=${v.id}"><svg class="ic"><use href="#i-doc"/></svg>${T('v.order')}</a></div>
 <p class="meta" style="margin-top:1rem"><svg class="ic gold"><use href="#i-pin"/></svg> Bahnhofstraße, 61352 Bad Homburg vor der Höhe, Allemagne · <svg class="ic gold"><use href="#i-shield"/></svg> Garantie 12 mois min · <svg class="ic gold"><use href="#i-truck"/></svg> Livraison 3-5 j</p>
 </div></div>
 <div class="tabs">

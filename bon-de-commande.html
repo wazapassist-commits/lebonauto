@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bon de commande | KlarDrive Bad Homburg vor der Höhe</title>
+<meta name="description" content="Bon de commande et réservation KlarDrive Bad Homburg : acompte 30 %, garantie 12 mois, livraison 5 jours, rétractation 15 jours.">
+<link rel="icon" type="image/png" href="assets/img/logo.png?v=25">
+<link rel="stylesheet" href="assets/css/style.css?v=22">
+<style>
+.doc{max-width:860px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:8px;padding:2rem;box-shadow:var(--shadow)}
+.doc-head{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;border-bottom:3px solid var(--gold);padding-bottom:1rem;margin-bottom:1.2rem}
+.doc-head img{height:64px;width:auto}
+.doc h1{font-size:1.5rem;margin:.2rem 0}
+.doc h2{font-size:1.05rem;margin:1.4rem 0 .6rem;color:var(--gold-deep)}
+.doc table{width:100%;border-collapse:collapse;font-size:.92rem}
+.doc th,.doc td{border:1px solid var(--line);padding:.5rem .7rem;text-align:left;vertical-align:top}
+.doc th{background:#F4F6F9;width:38%}
+.doc input,.doc select{width:100%;border:0;border-bottom:1px dashed var(--gold);font:inherit;padding:.25rem 0;background:transparent}
+.doc input:focus{outline:none;border-bottom-style:solid}
+.todo{background:#FFF3D6;border:1px dashed #C90;border-radius:4px;padding:0 .4rem;font-weight:700}
+.sig{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}
+.sig div{border:1px solid var(--line);border-radius:4px;min-height:110px;padding:.6rem;font-size:.85rem;color:var(--muted)}
+.clauses{font-size:.85rem;color:#3A4356}
+.clauses li{margin-bottom:.35rem}
+.noprint-actions{display:flex;gap:.7rem;flex-wrap:wrap;margin:1.2rem 0}
+@media print{
+  .header,.topbar,.footer,.floating-wa,.noprint-actions,.noprint{display:none!important}
+  body{background:#fff}
+  .doc{box-shadow:none;border:0;max-width:100%;padding:0}
+  .section{padding:0}.container{max-width:100%}
+}
+</style>
+</head>
+<body>
+<div class="topbar"><span>Document contractuel</span> — <strong>KlarDrive Bad Homburg</strong></div>
+<header class="header"><div class="container nav">
+<a class="brand" href="index.html"><img src="assets/img/logo.png?v=25" alt="KlarDrive — Bad Homburg vor der Höhe"></a>
+<nav class="links"><a href="index.html">Accueil</a><a href="catalogue.html">Catalogue</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a></nav>
+<a class="btn btn-primary nav-cta" href="catalogue.html">Voir nos véhicules</a>
+<div class="lang-switcher"></div>
+<button class="burger" aria-label="menu"><svg class="ic" viewBox="0 0 24 24" style="width:26px;height:26px"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button></div></header>
+
+<section class="section"><div class="container">
+<div class="noprint-actions noprint">
+<button class="btn btn-dark" onclick="window.print()"><svg class="ic"><use href="#i-doc"/></svg>Imprimer / PDF</button>
+<button class="btn btn-whatsapp" onclick="sendOrderWA()"><svg class="ic"><use href="#i-chat"/></svg>Envoyer via WhatsApp</button>
+<a class="btn btn-ghost" style="color:#0A1E3C;border-color:#0A1E3C" href="catalogue.html">← Retour au catalogue</a>
+</div>
+<div class="doc" id="doc">
+<div class="doc-head">
+<img src="assets/img/logo.png?v=25" alt="KlarDrive">
+<div><h1>BON DE COMMANDE – RÉSERVATION <span id="bc-num"></span></h1>
+<p class="meta">Date d'émission : <span id="bc-date"></span> · KlarDrive, Bahnhofstraße, 61352 Bad Homburg vor der Höhe, Allemagne<br>
+contact@klardrive.de · HRB <span class="todo">à compléter</span> · USt-IdNr. <span class="todo">à compléter</span></p></div>
+</div>
+
+<h2>1. Acheteur</h2>
+<table>
+<tr><th>Nom et prénoms</th><td><input id="f-nom" placeholder="NOM Prénom"></td></tr>
+<tr><th>Adresse</th><td><input id="f-adr" placeholder="Rue, code postal, ville"></td></tr>
+<tr><th>Pays</th><td><input id="f-pays" placeholder="France / Allemagne / …"></td></tr>
+<tr><th>Téléphone</th><td><input id="f-tel" placeholder="+33 / +49 …"></td></tr>
+<tr><th>E-mail</th><td><input id="f-mail" placeholder="vous@exemple.fr"></td></tr>
+<tr><th>Livraison à domicile</th><td><select id="f-liv"><option>Oui</option><option>Non (retrait sur place)</option></select></td></tr>
+<tr><th>Adresse de livraison (si différente)</th><td><input id="f-livadr" placeholder="Rue, code postal, ville"></td></tr>
+</table>
+
+<h2>2. Véhicule commandé</h2>
+<table>
+<tr><th>Marque – modèle</th><td><input id="v-des" placeholder="Ex. BMW X5 xDrive30d M Sport"></td></tr>
+<tr><th>Année / mise en circulation</th><td><input id="v-an" placeholder="2022"></td></tr>
+<tr><th>Kilométrage</th><td><input id="v-km" placeholder="84 500 km"></td></tr>
+<tr><th>Énergie / transmission</th><td><input id="v-en" placeholder="Diesel / Automatique"></td></tr>
+<tr><th>Puissance</th><td><input id="v-pu" placeholder="286 ch"></td></tr>
+<tr><th>N° de châssis (VIN)</th><td><input id="v-vin" placeholder="À compléter à la réservation"></td></tr>
+<tr><th>Référence annonce</th><td><input id="v-ref" placeholder="id véhicule"></td></tr>
+</table>
+
+<h2>3. Prix et règlement</h2>
+<table>
+<tr><th>Prix total TTC</th><td><b id="p-total">—</b> <input id="p-total-in" placeholder="Saisir si besoin" style="margin-top:.3rem"></td></tr>
+<tr><th>Acompte de réservation (30 %)</th><td><b id="p-acompte">—</b></td></tr>
+<tr><th>Solde restant dû</th><td><b id="p-solde">—</b></td></tr>
+<tr><th>Mode de règlement</th><td>Virement bancaire sur le compte indiqué à la réservation. Garantie 12 mois minimum incluse.</td></tr>
+</table>
+
+<h2>4. Conditions</h2>
+<ul class="clauses">
+<li>Le versement de l'acompte de 30 % bloque le véhicule pour l'acheteur et déclenche la préparation finale (contrôle 250 points, nettoyage professionnel).</li>
+<li>Livraison sous 5 jours ouvrés dans le Hochtaunuskreis, 3 à 5 jours ailleurs en Europe, transport assuré avec numéro de suivi.</li>
+<li>Contrôle final effectué en présence de l'acheteur le jour de la remise. Non-conformité majeure : échange ou remboursement immédiat.</li>
+<li>Délai de rétractation de 15 jours. Remboursement intégral de l'acompte en cas d'annulation dans ce délai.</li>
+<li>Garantie légale de 12 mois minimum, extensions possibles jusqu'à 36 mois.</li>
+<li>Immatriculation (COC, contrôle technique, plaques) gérée par KlarDrive pour les livraisons en Allemagne.</li>
+</ul>
+
+<div class="sig">
+<div>Mention « Bon pour accord », date et signature de l'acheteur<br><br><br>Le …… / …… / 2026</div>
+<div>Signature et cachet KlarDrive<br><br><br>Le …… / …… / 2026</div>
+</div>
+<p class="meta" style="margin-top:1rem">Document généré depuis klardrive — les champs surlignés doivent être complétés avant signature. Document à faire valider par un conseil juridique (droit allemand applicable).</p>
+</div>
+</div></section>
+
+<footer class="footer"><div class="container footer-grid">
+<div><h4>KLARDRIVE</h4><p>Votre destination de confiance pour des véhicules de qualité premium.</p><p><a href="mailto:contact@klardrive.de"><svg class="ic gold"><use href="#i-mail"/></svg> contact@klardrive.de</a><br><svg class="ic gold"><use href="#i-pin"/></svg> Bahnhofstraße, 61352 Bad Homburg vor der Höhe, Allemagne</p></div>
+<div><h4>Navigation</h4><p><a href="index.html">Accueil</a><br><a href="catalogue.html">Catalogue</a><br><a href="a-propos.html">À propos</a><br><a href="contact.html">Contact</a><br><a href="blog.html">Blog</a><br><a href="faq.html">FAQ</a><br><a href="bad-homburg.html">Bad Homburg</a></p></div>
+<div><h4>Horaires</h4><p>Lun – Ven : 9h – 18h<br>Sam : sur rendez-vous<br>Dim : fermé</p></div>
+<div><h4>Contact rapide</h4><p><a class="btn btn-primary" href="contact.html">Demander un devis</a></p></div>
+</div><div class="container bottom"><span>© <span data-year>2026</span> KlarDrive — Tous droits réservés.</span></div></footer>
+<a class="floating-wa" href="https://wa.me/496172123456" aria-label="WhatsApp"><svg class="ic"><use href="#i-chat"/></svg></a>
+<script src="assets/js/i18n.js?v=22"></script><script src="assets/js/sb-config.js?v=22"></script><script src="assets/js/sb.js?v=22"></script><script src="assets/js/vehicles.js?v=22"></script><script src="assets/js/main.js?v=22"></script>
+<script>
+(function(){
+  var d = new Date();
+  document.getElementById('bc-date').textContent = ('0'+d.getDate()).slice(-2)+'/'+('0'+(d.getMonth()+1)).slice(-2)+'/'+d.getFullYear();
+  document.getElementById('bc-num').textContent = 'N° BC-'+d.getFullYear()+'-'+Math.floor(100000+Math.random()*900000);
+  function num(v){ return Number(String(v).replace(/[^0-9]/g,''))||0; }
+  function eur(n){ try{ return n.toLocaleString('fr-FR')+' €'; }catch(e){ return n+' €'; } }
+  function refresh(){
+    var t = num(document.getElementById('p-total-in').value) || window.__bcTotal || 0;
+    if(!t) return;
+    document.getElementById('p-total').textContent = eur(t);
+    document.getElementById('p-acompte').textContent = eur(Math.round(t*0.30))+' (30 %)';
+    document.getElementById('p-solde').textContent = eur(t-Math.round(t*0.30));
+  }
+  document.getElementById('p-total-in').addEventListener('input', refresh);
+  try{
+    var id = new URLSearchParams(location.search).get('id');
+    var v = (VEHICLES||[]).find(function(x){ return x.id===id; });
+    if(v){
+      document.getElementById('v-des').value = (v.marque+' '+v.modele+(v.version?' — '+v.version:'')).slice(0,120);
+      document.getElementById('v-an').value = v.annee||'';
+      document.getElementById('v-km').value = v.km ? v.km.toLocaleString('fr-FR')+' km' : '';
+      document.getElementById('v-en').value = [v.carburant,v.boite].filter(Boolean).join(' / ');
+      document.getElementById('v-pu').value = v.puissance||'';
+      document.getElementById('v-ref').value = v.id;
+      window.__bcTotal = v.prix||0;
+      document.title = 'Bon de commande '+v.marque+' '+v.modele+' | KlarDrive';
+    }
+  }catch(e){}
+  refresh();
+  window.sendOrderWA = function(){
+    var g = function(i){ return document.getElementById(i).value||'—'; };
+    var msg = 'Bonjour KlarDrive, voici mon bon de commande '+document.getElementById('bc-num').textContent
+      +'%0ANom: '+encodeURIComponent(g('f-nom'))+'%0ATél: '+encodeURIComponent(g('f-tel'))
+      +'%0AVéhicule: '+encodeURIComponent(g('v-des'))+'%0APrix: '+encodeURIComponent(document.getElementById('p-total').textContent);
+    window.open('https://wa.me/496172123456?text='+msg,'_blank');
+  };
+})();
+</script>
+</body></html>
