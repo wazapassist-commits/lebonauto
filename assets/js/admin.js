@@ -1,4 +1,4 @@
-// Dashboard admin — LeBonAuto (Supabase : données + photos en direct).
+// Dashboard admin — KlarDrive (Supabase : données + photos en direct).
 // Source de vérité : tables Supabase (vehicles, articles) + bucket Storage (vehicules).
 // Le site public lit Supabase avec repli statique intégré.
 // Interface en français (outil interne).

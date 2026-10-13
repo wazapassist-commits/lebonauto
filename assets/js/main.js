@@ -63,9 +63,9 @@ function handleContact(e){
   e.preventDefault();
   const f = new FormData(e.target);
   let L = 'fr'; try{ if(window.LBA_I18N) L = window.LBA_I18N.get(); }catch(err){}
-  const hello = {fr:'Bonjour LeBonAuto,', en:'Hello LeBonAuto,', es:'Hola LeBonAuto,', pt:'Olá LeBonAuto,'}[L]||'Bonjour LeBonAuto,';
+  const hello = {fr:'Bonjour KlarDrive,', en:'Hello KlarDrive,', es:'Hola KlarDrive,', pt:'Olá KlarDrive,'}[L]||'Bonjour KlarDrive,';
   const msg = `${encodeURIComponent(hello)}%0A Nom: ${encodeURIComponent(f.get('nom')||'')}%0A Téléphone: ${encodeURIComponent(f.get('tel')||'')}%0A Sujet: ${encodeURIComponent(f.get('sujet')||'')}%0A Message: ${encodeURIComponent(f.get('message')||'')}`;
-  window.open(`https://wa.me/33652242278?text=${msg}`,'_blank');
+  window.open(`https://wa.me/496172123456?text=${msg}`,'_blank');
   document.getElementById('form-ok').style.display='block';
   return false;
 }

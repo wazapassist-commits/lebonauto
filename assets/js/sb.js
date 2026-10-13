@@ -1,4 +1,4 @@
-// Client Supabase minimal (REST brut, sans dépendance) — LeBonAuto.
+// Client Supabase minimal (REST brut, sans dépendance) — KlarDrive.
 // Lecture publique (catalogue/blog), écriture réservée à l'admin connecté (Auth email).
 // Utilisé par : le site public (lecture + repli statique) et le dashboard admin.
 (function(){

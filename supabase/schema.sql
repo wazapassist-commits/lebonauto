@@ -1,4 +1,4 @@
--- LeBonAuto : schema Supabase.
+-- KlarDrive : schema Supabase.
 -- A executer UNE FOIS dans : Supabase Dashboard, SQL Editor.
 -- Puis seed.sql pour importer les 29 vehicules et 6 articles.
 

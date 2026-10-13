@@ -1,4 +1,4 @@
-# LeBonAuto — config Apache (Hostinger mutualise)
+# KlarDrive — config Apache (Hostinger mutualise)
 <IfModule mod_rewrite.c>
 RewriteEngine On
 # Forcer HTTPS

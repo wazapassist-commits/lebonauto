@@ -1,4 +1,4 @@
-// Catalogue réel — LeBonAuto (source : lebonauto.fr)
+// Catalogue réel — KlarDrive (source : klardrive.de)
 // Données modifiables depuis le dashboard admin (admin.html) — garder les marqueurs intacts.
 /*ADMIN-DATA-START*/
 const VEHICLES = [
@@ -96,8 +96,8 @@ function specsLine(v){
   return parts.join(' · ');
 }
 function waLink(v){
-  const txt = encodeURIComponent(`${_t('wa.msg','Bonjour LeBonAuto, je suis intéressé par')} ${v.marque} ${v.modele} (${fmt(v.prix)}) ref ${v.id}. ${_t('wa.msg.end','Est-il disponible ?')}`);
-  return `https://wa.me/33652242278?text=${txt}`;
+  const txt = encodeURIComponent(`${_t('wa.msg','Bonjour KlarDrive, je suis intéressé par')} ${v.marque} ${v.modele} (${fmt(v.prix)}) ref ${v.id}. ${_t('wa.msg.end','Est-il disponible ?')}`);
+  return `https://wa.me/496172123456?text=${txt}`;
 }
 function cardHTML(v){
   return `<div class="card veh-card" onclick="location.href='vehicule.html?id=${v.id}'" role="link" tabindex="0" onkeydown="if(event.key==='Enter')location.href='vehicule.html?id=${v.id}'"><img src="${v.img}" alt="${v.marque} ${v.modele}" loading="lazy">
