@@ -9,6 +9,7 @@ create table if not exists vehicles (
   modele text not null,
   version text default '',
   prix integer not null,
+  prix_barre integer,
   annee integer,
   km integer,
   carburant text default '',

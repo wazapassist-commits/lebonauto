@@ -15,7 +15,7 @@ var LANG_META = {
 
 var T = {
 fr: {
-  'topbar.deals':"Réductions exclusives",
+  'topbar.deals':"−5 % sur tous nos véhicules",
   'topbar.financing':"Financement dès 139 €/mois",
   'topbar.online':"visiteurs en ligne",
   'nav.home':"Accueil",'nav.catalogue':"Catalogue",'nav.about':"À propos",'nav.contact':"Contact",'nav.blog':"Blog",'nav.faq':"FAQ",
@@ -193,7 +193,7 @@ fr: {
   'home.bh.cta':"Voir l'offre Bad Homburg / Taunus →"
 },
 en: {
-  'topbar.deals':"Exclusive deals",
+  'topbar.deals':"−5% off all our vehicles",
   'topbar.financing':"Financing from €139/mo",
   'topbar.online':"visitors online",
   'nav.home':"Home",'nav.catalogue':"Catalog",'nav.about':"About",'nav.contact':"Contact",'nav.blog':"Blog",'nav.faq':"FAQ",
@@ -371,7 +371,7 @@ en: {
   'home.bh.cta':"See the Bad Homburg / Taunus offer →"
 },
 es: {
-  'topbar.deals':"Descuentos exclusivos",
+  'topbar.deals':"−5 % en todos nuestros vehículos",
   'topbar.financing':"Financiación desde 139 €/mes",
   'topbar.online':"visitantes en línea",
   'nav.home':"Inicio",'nav.catalogue':"Catálogo",'nav.about':"Nosotros",'nav.contact':"Contacto",'nav.blog':"Blog",'nav.faq':"FAQ",
@@ -549,7 +549,7 @@ es: {
   'home.bh.cta':"Ver la oferta Bad Homburg / Taunus →"
 },
 pt: {
-  'topbar.deals':"Descontos exclusivos",
+  'topbar.deals':"−5% em todos os nossos veículos",
   'topbar.financing':"Financiamento desde 139 €/mês",
   'topbar.online':"visitantes online",
   'nav.home':"Início",'nav.catalogue':"Catálogo",'nav.about':"Sobre nós",'nav.contact':"Contacto",'nav.blog':"Blog",'nav.faq':"FAQ",
@@ -728,7 +728,7 @@ pt: {
 }
 ,
 de: {
-  'topbar.deals':"Exklusive Angebote",
+  'topbar.deals':"−5 % auf alle Fahrzeuge",
   'topbar.financing':"Finanzierung ab 139 €/Monat",
   'topbar.online':"Besucher online",
   'nav.home':"Startseite",'nav.catalogue':"Katalog",'nav.about':"Über uns",'nav.contact':"Kontakt",'nav.blog':"Blog",'nav.faq':"FAQ",

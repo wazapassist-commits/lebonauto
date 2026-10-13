@@ -128,6 +128,8 @@ h2{font-size:clamp(1.7rem,3vw,2.4rem);margin:0 0 .6rem;font-weight:700}
 .badge.blue{border-color:var(--ink);color:var(--ink)}
 .badge.green{border-color:var(--green);color:var(--green)}
 .price{font-family:var(--display);font-size:1.5rem;font-weight:800;letter-spacing:-.01em;color:var(--ink);margin-top:.4rem}
+.old-price{color:var(--muted);text-decoration:line-through;font-size:1rem;font-weight:600;margin-right:.55rem}
+.badge.promo{border-color:#C8102E;color:#C8102E}
 .meta{color:var(--muted);font-size:.9rem}
 /* ---------- catalogue : recherche + filtres premium ---------- */
 .search-zone{margin-bottom:1.6rem}

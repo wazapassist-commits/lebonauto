@@ -94,7 +94,7 @@ ${g.length>1?'<button class="gal-arrow left" onclick="galMove(-1)" aria-label="p
 ${g.length>1?'<div class="gal-thumbs" id="gal-thumbs">'+g.map((u,j)=>`<button class="${j===0?'on':''}" onclick="galShow(${j})" aria-label="Photo ${j+1}"><img src="${u}" alt="${v.marque} ${v.modele} photo ${j+1}" loading="lazy"></button>`).join('')+'</div>':''}
 </div>
 <div><span class="badge">${v.badge}</span><span class="badge green">${T('v.available')}</span>
-<h1>${v.marque} ${v.modele}</h1><p class="meta">${v.version||''}</p><div class="price">${fmt(v.prix)}</div>
+<h1>${v.marque} ${v.modele}</h1><p class="meta">${v.version||''}</p>${priceHTML(v)}
 <p class="meta">${T('v.from')} <b>${Math.round(v.prix/60).toLocaleString(loc())} ${T('v.permonth')}</b> · ${T('v.fin')}</p>
 <p class="live-line"><span class="dot"></span><b data-visitors>18</b>&nbsp;${T('v.viewing')}</p>
 <p class="desc">${v.desc||''}</p>
