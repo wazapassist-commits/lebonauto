@@ -95,9 +95,10 @@ function specsLine(v){
   if(v.boite) parts.push(v.boite);
   return parts.join(' · ');
 }
-function waLink(v){
-  const txt = encodeURIComponent(`${_t('wa.msg','Bonjour KlarDrive, je suis intéressé par')} ${v.marque} ${v.modele} (${fmt(v.prix)}) ref ${v.id}. ${_t('wa.msg.end','Est-il disponible ?')}`);
-  return `https://wa.me/496172123456?text=${txt}`;
+function mailLink(v){
+  const subject = 'KlarDrive - ' + v.marque + ' ' + v.modele + ' (ref ' + v.id + ')';
+  const body = `${_t('wa.msg','Bonjour KlarDrive, je suis intéressé par')} ${v.marque} ${v.modele} (${fmt(v.prix)}) ref ${v.id}. ${_t('wa.msg.end','Est-il disponible ?')}`;
+  return 'mailto:contact@klardrive.de?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
 }
 function priceHTML(v){
   if(v.prix_barre && v.prix_barre > v.prix){
@@ -117,7 +118,7 @@ function cardHTML(v){
   <div class="card-body"><span class="badge">${v.badge}</span><span class="badge blue">${v.cat}</span>${promoBadge(v)}
   <h3>${v.marque} ${v.modele}</h3><p class="meta">${specsLine(v)}</p>
   ${priceHTML(v)}
-  <div class="veh-actions"><a class="btn btn-dark" href="vehicule.html?id=${v.id}">${_t('card.details','Détails')}</a><a class="btn btn-whatsapp" href="${waLink(v)}" onclick="event.stopPropagation()"><svg class="ic"><use href="#i-chat"/></svg>${_t('card.contact','Contacter')}</a></div>
+  <div class="veh-actions"><a class="btn btn-dark" href="vehicule.html?id=${v.id}">${_t('card.details','Détails')}</a><a class="btn btn-primary" href="${mailLink(v)}" onclick="event.stopPropagation()"><svg class="ic"><use href="#i-mail"/></svg>${_t('card.contact','Contacter')}</a></div>
   </div></div>`;
 }
 // Données live Supabase (repli statique intégré si hors ligne / non configuré)

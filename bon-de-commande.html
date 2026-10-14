@@ -41,7 +41,7 @@
 <section class="section"><div class="container">
 <div class="noprint-actions noprint">
 <button class="btn btn-dark" onclick="window.print()"><svg class="ic"><use href="#i-doc"/></svg>Imprimer / PDF</button>
-<button class="btn btn-whatsapp" onclick="sendOrderWA()"><svg class="ic"><use href="#i-chat"/></svg>Envoyer via WhatsApp</button>
+<button class="btn btn-dark" onclick="sendOrderWA()"><svg class="ic"><use href="#i-doc"/></svg>Envoyer par e-mail</button>
 <a class="btn btn-ghost" style="color:#0A1E3C;border-color:#0A1E3C" href="catalogue.html">← Retour au catalogue</a>
 </div>
 <div class="doc" id="doc">
@@ -79,7 +79,7 @@ contact@klardrive.de · HRB <span class="todo">à compléter</span> · USt-IdNr.
 <tr><th>Prix total TTC</th><td><b id="p-total">—</b> <input id="p-total-in" placeholder="Saisir si besoin" style="margin-top:.3rem"></td></tr>
 <tr><th>Acompte de réservation (30 %)</th><td><b id="p-acompte">—</b></td></tr>
 <tr><th>Solde restant dû</th><td><b id="p-solde">—</b></td></tr>
-<tr><th>Mode de règlement</th><td>Virement bancaire sur le compte indiqué à la réservation. Garantie 12 mois minimum incluse.</td></tr>
+<tr><th>Mode de règlement</th><td><select id="f-pay"><option>Virement bancaire</option><option>Binance Pay (crypto : BTC, ETH, USDT)</option></select><p class="meta" style="margin-top:.4rem">Virement : IBAN communiqué <b>par e-mail après validation</b> de la réservation (jamais publié en ligne). Binance Pay : réglez au Pay ID <b>796342841</b> (KlarDrive), reçu exigé avant livraison. Montant converti en euros au taux du jour.</p></td></tr>
 </table>
 
 <h2>4. Conditions</h2>
@@ -106,8 +106,7 @@ contact@klardrive.de · HRB <span class="todo">à compléter</span> · USt-IdNr.
 <div><h4>Horaires</h4><p>Lun – Ven : 9h – 18h<br>Sam : sur rendez-vous<br>Dim : fermé</p></div>
 <div><h4>Contact rapide</h4><p><a class="btn btn-primary" href="contact.html">Demander un devis</a></p></div>
 </div><div class="container bottom"><span>© <span data-year>2026</span> KlarDrive — Tous droits réservés.</span></div></footer>
-<a class="floating-wa" href="https://wa.me/496172123456" aria-label="WhatsApp"><svg class="ic"><use href="#i-chat"/></svg></a>
-<script src="assets/js/i18n.js?v=22"></script><script src="assets/js/sb-config.js?v=22"></script><script src="assets/js/sb.js?v=22"></script><script src="assets/js/vehicles.js?v=22"></script><script src="assets/js/main.js?v=22"></script>
+<script src="assets/js/i18n.js?v=22"></script><script src="assets/js/binance-pay.js?v=1"></script><script src="assets/js/sb-config.js?v=22"></script><script src="assets/js/sb.js?v=22"></script><script src="assets/js/vehicles.js?v=22"></script><script src="assets/js/main.js?v=22"></script>
 <script>
 (function(){
   var d = new Date();
@@ -142,8 +141,10 @@ contact@klardrive.de · HRB <span class="todo">à compléter</span> · USt-IdNr.
     var g = function(i){ return document.getElementById(i).value||'—'; };
     var msg = 'Bonjour KlarDrive, voici mon bon de commande '+document.getElementById('bc-num').textContent
       +'%0ANom: '+encodeURIComponent(g('f-nom'))+'%0ATél: '+encodeURIComponent(g('f-tel'))
-      +'%0AVéhicule: '+encodeURIComponent(g('v-des'))+'%0APrix: '+encodeURIComponent(document.getElementById('p-total').textContent);
-    window.open('https://wa.me/496172123456?text='+msg,'_blank');
+      +'%0AVéhicule: '+encodeURIComponent(g('v-des'))+'%0APrix: '+encodeURIComponent(document.getElementById('p-total').textContent)
+      +'%0APaiement: '+encodeURIComponent(g('f-pay'));
+    var subj = 'Bon de commande ' + document.getElementById('bc-num').textContent + ' - ' + g('f-nom');
+    window.location.href = 'mailto:contact@klardrive.de?subject=' + encodeURIComponent(subj) + '&body=' + msg;
   };
 })();
 </script>

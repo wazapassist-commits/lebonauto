@@ -58,14 +58,13 @@ document.addEventListener('click',e=>{
 })();
 // Année footer
 document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());
-// Formulaire -> WhatsApp
+// Formulaire -> e-mail (mailto)
 function handleContact(e){
   e.preventDefault();
   const f = new FormData(e.target);
-  let L = 'fr'; try{ if(window.LBA_I18N) L = window.LBA_I18N.get(); }catch(err){}
-  const hello = {fr:'Bonjour KlarDrive,', en:'Hello KlarDrive,', es:'Hola KlarDrive,', pt:'Olá KlarDrive,'}[L]||'Bonjour KlarDrive,';
-  const msg = `${encodeURIComponent(hello)}%0A Nom: ${encodeURIComponent(f.get('nom')||'')}%0A Téléphone: ${encodeURIComponent(f.get('tel')||'')}%0A Sujet: ${encodeURIComponent(f.get('sujet')||'')}%0A Message: ${encodeURIComponent(f.get('message')||'')}`;
-  window.open(`https://wa.me/496172123456?text=${msg}`,'_blank');
+  const subject = 'Contact KlarDrive - ' + (f.get('sujet')||'');
+  const body = 'Nom: ' + (f.get('nom')||'') + '\nTéléphone: ' + (f.get('tel')||'') + '\nSujet: ' + (f.get('sujet')||'') + '\nMessage: ' + (f.get('message')||'');
+  window.location.href = 'mailto:contact@klardrive.de?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   document.getElementById('form-ok').style.display='block';
   return false;
 }

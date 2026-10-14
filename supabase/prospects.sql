@@ -4,7 +4,7 @@ create table if not exists leads (
   created_at timestamptz default now(),
   nom text,
   tel text,
-  canal text default 'whatsapp',
+  canal text default 'email',
   langue text default 'de',
   modele_recherche text,
   budget_max integer,

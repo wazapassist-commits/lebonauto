@@ -12,7 +12,7 @@ const ARTICLES = [
       "Le financement auto se résume à trois chiffres : l'acompte (30 % à la réservation chez KlarDrive), la durée (de 6 à 84 mois) et la mensualité. Plus la durée est longue, plus la mensualité baisse : nos offres démarrent à 139 €/mois.",
       "Préparez un dossier solide : pièce d'identité, justificatifs de revenus des 3 derniers mois et relevés bancaires. Une acceptation de principe arrive généralement en 24 h, sans frais cachés ni engagement.",
       "Comparez toujours le coût total du crédit, pas seulement la mensualité : taux, assurance emprunteur et frais de dossier. Un apport plus élevé réduit le montant financé et le coût des intérêts.",
-      "Une simulation en 5 minutes ? Écrivez-nous sur WhatsApp au +49 6172 123456 : notre équipe à Bad Homburg vor der Höhe monte votre dossier de financement."
+      "Une simulation en 5 minutes ? Écrivez-nous par e-mail à contact@klardrive.de : notre équipe à Bad Homburg vor der Höhe monte votre dossier de financement."
     ]
   },
   {
@@ -25,7 +25,7 @@ const ARTICLES = [
       "En Allemagne comme en France, tout professionnel doit garantir un véhicule d'occasion 12 mois minimum contre les vices non déclarés. C'est la base légale : exigez-la par écrit avant de signer.",
       "Sur les véhicules de moins de 4 ans, un bonus s'ajoute : la garantie constructeur restante (Herstellergarantie). Une BMW ou Mercedes de 2023 peut encore être couverte par le constructeur : vérifiez la date de première immatriculation et le carnet d'entretien.",
       "Chez KlarDrive, chaque véhicule affiche sa garantie : 12 mois minimum, extension possible jusqu'à 36 mois, et bénéfice de la garantie constructeur restante quand elle existe. Notre réseau de garages partenaires intervient près de votre domicile.",
-      "Vice caché ou panne après l'achat ? Notre équipe à Bad Homburg vor der Höhe vous répond au +49 6172 123456 et organise la prise en charge."
+      "Vice caché ou panne après l'achat ? Notre équipe à Bad Homburg vor der Höhe vous répond par e-mail à contact@klardrive.de et organise la prise en charge."
     ]
   },
   {
@@ -38,7 +38,7 @@ const ARTICLES = [
       "Commander une voiture sans se déplacer, c'est possible : devis validé en ligne, signature électronique et acompte sécurisé de 30 %. Le véhicule est bloqué pour vous et la préparation finale commence aussitôt.",
       "Dans le Hochtaunuskreis, la livraison prend 5 jours ouvrés : transport assuré et sécurisé, numéro de suivi transmis par e-mail et SMS. Nous livrons à Bad Homburg vor der Höhe, Oberursel, Friedrichsdorf, Kronberg, Königstein, Usingen et Wehrheim.",
       "Le jour J, le contrôle final a lieu en votre présence : carrosserie, équipements, papiers et ordinateur de bord réglé en allemand. Non-conformité majeure ? Échange ou remboursement immédiat, plus 15 jours de rétractation.",
-      "Prêt à recevoir votre voiture à domicile ? Appelez KlarDrive au +49 6172 123456 ou écrivez sur WhatsApp : réponse en moins d'une heure ouvrée."
+      "Prêt à recevoir votre voiture à domicile ? Écrivez à KlarDrive à contact@klardrive.de : réponse en moins d'une heure ouvrée."
     ]
   },
   {
@@ -51,7 +51,7 @@ const ARTICLES = [
       "Sur le marché allemand, trois finitions dominent la demande : M Sport chez BMW, AMG Line chez Mercedes et S line chez Audi. Elles regroupent boucliers sport, jantes alliage, sièges sport et volant cuir : une voiture ainsi équipée se revend plus vite et 10 à 20 % plus cher.",
       "Au-delà du pack, quatre options protègent la valeur : le toit panoramique, les sièges chauffants en cuir, la caméra 360° et les aides à la conduite (régulateur adaptatif, angle mort). Les boîtes automatiques sont devenues la norme attendue.",
       "Notre stock privilégie les véhicules récents de moins de 4 ans avec ces finitions allemandes recherchées : BMW X5 M Sport, Mercedes GLC AMG Line, Audi Q3 S line. Historique vérifié, kilométrage attesté, garantie 12 mois minimum.",
-      "Vous cherchez une finition précise ? Contactez-nous sur WhatsApp au +49 6172 123456 : nous trouvons votre modèle dans le Hochtaunuskreis et partout en Europe."
+      "Vous cherchez une finition précise ? Contactez-nous par e-mail à contact@klardrive.de : nous trouvons votre modèle dans le Hochtaunuskreis et partout en Europe."
     ]
   },
   {
@@ -64,7 +64,7 @@ const ARTICLES = [
       "Immatriculer un véhicule importé en Allemagne (Zulassung) exige quatre éléments : le certificat de conformité européen (COC), un contrôle technique (HU) de moins de 6 mois, une pièce d'identité avec justificatif de domicile et une attestation d'assurance (eVB-Nummer).",
       "Le passage à la Zulassungsstelle prend ensuite quelques jours : le véhicule reçoit ses plaques (Kennzeichen) et sa carte grise allemande. Sans COC conforme, l'immatriculation est refusée : vérifiez-le avant tout achat.",
       "Chez KlarDrive, vous n'avez rien à faire : notre service prépare le dossier COC, organise la HU et effectue les démarches en préfecture. Votre voiture est livrée à domicile dans le Hochtaunuskreis déjà immatriculée, en 5 jours.",
-      "Un doute sur les papiers d'un véhicule ? Notre équipe à Bad Homburg vor der Höhe vous répond au +49 6172 123456, avant, pendant et après votre achat."
+      "Un doute sur les papiers d'un véhicule ? Notre équipe à Bad Homburg vor der Höhe vous répond par e-mail à contact@klardrive.de, avant, pendant et après votre achat."
     ]
   },
   {
@@ -77,7 +77,7 @@ const ARTICLES = [
       "Un véhicule en reimport est une voiture neuve ou récente achetée dans un autre pays de l'UE puis immatriculée en Allemagne. Même usine, même finition M Sport ou AMG Line, même qualité : seule la filière d'achat change, et le prix baisse de 15 à 30 %.",
       "Chez KlarDrive, tous nos reimports sont en spécification allemande : ordinateur de bord en allemand, carnet d'entretien complet et historique vérifié. Chaque véhicule passe notre contrôle de 250 points avant la mise en vente.",
       "Les papiers européens (COC, factures, carnet) sont fournis et nous gérons la Zulassung : contrôle technique (HU), passage en préfecture et plaques. Vous recevez une voiture prête à rouler, immatriculée à Bad Homburg vor der Höhe.",
-      "Une question sur un modèle en reimport ? Écrivez-nous sur WhatsApp au +49 6172 123456 : réponse en moins d'une heure ouvrée, devis détaillé sans engagement."
+      "Une question sur un modèle en reimport ? Écrivez-nous par e-mail à contact@klardrive.de : réponse en moins d'une heure ouvrée, devis détaillé sans engagement."
     ]
   },
   {
@@ -90,7 +90,7 @@ const ARTICLES = [
       "Acheter un véhicule à distance est devenu simple et sûr à condition de passer par un professionnel transparent. Chez KlarDrive, tout commence par un devis détaillé puis une signature électronique, avec un acompte sécurisé de 30 % pour réserver le véhicule.",
       "La préparation finale comprend le contrôle des 250 points, la préparation mécanique et carrosserie ainsi qu'un nettoyage professionnel. La mise à disposition intervient sous 3 à 5 jours ouvrés, partout en Europe, avec un numéro de suivi transmis par e-mail et SMS.",
       "Le jour de la remise, le contrôle final est effectué en votre présence. Et en cas de non-conformité majeure, l'échange ou le remboursement est immédiat, avec un délai de rétractation de 15 jours.",
-      "Une question avant de vous lancer ? Écrivez-nous sur WhatsApp au +49 6172 123456 : réponse en moins d'une heure ouvrée."
+      "Une question avant de vous lancer ? Écrivez-nous par e-mail à contact@klardrive.de : réponse en moins d'une heure ouvrée."
     ]
   },
   {
@@ -103,7 +103,7 @@ const ARTICLES = [
       "Un achat d'occasion serein repose d'abord sur les documents. Exigez systématiquement l'immatriculation du véhicule, le certificat de non-gage officiel et un contrôle technique de moins de 6 mois.",
       "Demandez aussi le carnet d'entretien et l'historique du véhicule : ils prouvent le suivi et la régularité des révisions. Le certificat de cession formalise la vente, et l'attestation kilométrique garantit la conformité du compteur.",
       "Chez KlarDrive, ces 6 documents sont fournis avec chaque véhicule, sans exception, avec un historique vérifié et un kilométrage attesté.",
-      "Un doute sur un document ? Notre équipe à Bad Homburg vor der Höhe vous répond au +49 6172 123456, avant, pendant et après votre achat."
+      "Un doute sur un document ? Notre équipe à Bad Homburg vor der Höhe vous répond par e-mail à contact@klardrive.de, avant, pendant et après votre achat."
     ]
   },
   {
@@ -116,7 +116,7 @@ const ARTICLES = [
       "Acheter une voiture nécessite une préparation rigoureuse pour éviter les mauvaises surprises financières. Il faut définir un budget réaliste en analysant revenus, dépenses fixes et variables, sans oublier assurance, entretien, carburant et réparations.",
       "Une fois le budget établi, comparez les modèles : avis clients, fiabilité, confort et coûts d'entretien. L'occasion récente offre un excellent rapport qualité-prix grâce à une décote plus faible.",
       "Vérifiez toujours l'historique du véhicule : entretiens, accidents, kilométrage. Négociez sur la base de la valeur réelle du marché et méfiez-vous des prix anormalement bas.",
-      "Chez KlarDrive, chaque véhicule est contrôlé et son historique vérifié : contactez-nous sur WhatsApp au +49 6172 123456 pour être accompagné dans votre achat."
+      "Chez KlarDrive, chaque véhicule est contrôlé et son historique vérifié : contactez-nous par e-mail à contact@klardrive.de pour être accompagné dans votre achat."
     ]
   },
   {
@@ -155,7 +155,7 @@ const ARTICLES = [
       "Un véhicule bien entretenu est plus sûr, plus économique et garde une meilleure valeur de revente.",
       "Contrôlez le niveau d'huile moteur chaque mois, la pression et l'état des pneus chaque semaine, et nettoyez régulièrement intérieur et extérieur contre la corrosion.",
       "Restez attentif aux bruits, vibrations ou voyants inhabituels. L'entretien saisonnier est essentiel : batterie et climatisation au printemps, refroidissement et freins en été, visibilité en automne, chauffage et freins en hiver.",
-      "En cas de choc ou de panne complexe, confiez votre véhicule à un professionnel pour un diagnostic et un entretien préventif. Contactez KlarDrive au +49 6172 123456."
+      "En cas de choc ou de panne complexe, confiez votre véhicule à un professionnel pour un diagnostic et un entretien préventif. Écrivez à KlarDrive à contact@klardrive.de."
     ]
   }
 ,
@@ -169,7 +169,7 @@ const ARTICLES = [
       "En Allemagne, le contrôle technique s'appelle Hauptuntersuchung (HU), complété par le contrôle antipollution (AU). Il est obligatoire tous les 2 ans pour les voitures particulières et coûte entre 100 et 150 € selon l'organisme : TÜV, DEKRA, GTÜ ou KÜS.",
       "Environ 160 points sont vérifiés : freins, éclairage, pneus, suspension, direction, corrosion du châssis et émissions. En cas de défaut grave, la vignette HU est refusée et le véhicule doit être réparé puis représenté sous un mois.",
       "Avant d'acheter une occasion, exigez un rapport HU de moins de 6 mois : c'est la meilleure preuve de l'état réel du véhicule. Méfiez-vous des voitures vendues sans HU : elles cachent souvent des réparations coûteuses.",
-      "Chez KlarDrive, chaque véhicule est vendu avec une HU valide et un contrôle de 250 points. Une question ? Appelez-nous au +49 6172 123456 ou écrivez sur WhatsApp : réponse en moins d'une heure ouvrée."
+      "Chez KlarDrive, chaque véhicule est vendu avec une HU valide et un contrôle de 250 points. Une question ? Écrivez-nous à contact@klardrive.de : réponse en moins d'une heure ouvrée."
     ]
   },
   {
@@ -182,7 +182,7 @@ const ARTICLES = [
       "La fraude au kilométrage touche encore 10 à 15 % des occasions en Europe : un compteur rabaissé de 100 000 km peut gonfler le prix de plusieurs milliers d'euros. En Allemagne, la manipulation est punissable, mais elle reste difficile à prouver après l'achat.",
       "Cinq signaux d'alerte : usure du volant, des pédales et des sièges incohérente avec le kilométrage affiché ; carnet d'entretien incomplet ; rapports HU successifs aux kilométrages illogiques ; pneus et freins neufs sur une voiture peu roulée ; prix anormalement bas.",
       "Exigez toujours l'historique complet : carnet tamponné, factures d'entretien, rapports HU et contrôle DEKRA ou TÜV. Un diagnostic électronique peut aussi révéler le kilométrage enregistré dans les calculateurs du moteur, de la boîte et de l'ABS.",
-      "Chez KlarDrive, le kilométrage de chaque véhicule est attesté par écrit avec historique vérifié. Un doute sur une annonce ? Notre équipe à Bad Homburg vor der Höhe vous répond au +49 6172 123456."
+      "Chez KlarDrive, le kilométrage de chaque véhicule est attesté par écrit avec historique vérifié. Un doute sur une annonce ? Notre équipe à Bad Homburg vor der Höhe vous répond par e-mail à contact@klardrive.de."
     ]
   },
   {
@@ -195,7 +195,7 @@ const ARTICLES = [
       "Le SUV familial doit cocher quatre cases : un coffre de 500 L minimum, de vraies places arrière, une fiabilité éprouvée et un budget maîtrisé. En 2026, cinq modèles dominent les recherches : BMW X1, Audi Q3, VW Tiguan, Toyota RAV 4 et Mercedes GLC.",
       "Le X1 et le Q3 séduisent par leurs finitions premium et leurs motorisations efficientes. Le Tiguan reste le roi du rapport espace-prix avec son coffre modulable. Le RAV 4 hybride affiche la meilleure fiabilité et la consommation la plus basse. Le GLC joue la carte du confort haut de gamme.",
       "En occasion récente de moins de 4 ans, comptez 18 000 à 30 000 € selon le modèle et le kilométrage. Privilégiez les versions boîte automatique avec historique d'entretien constructeur complet.",
-      "Tous ces modèles sont en stock chez KlarDrive à Bad Homburg vor der Höhe, contrôlés sur 250 points et garantis 12 mois minimum. Essayez-les : appelez le +49 6172 123456."
+      "Tous ces modèles sont en stock chez KlarDrive à Bad Homburg vor der Höhe, contrôlés sur 250 points et garantis 12 mois minimum. Essayez-les : écrivez à contact@klardrive.de."
     ]
   },
   {
@@ -208,7 +208,7 @@ const ARTICLES = [
       "Rouler électrique en Allemagne reste avantageux : électricité à domicile autour de 0,30 €/kWh, soit environ 6 € aux 100 km contre 12 à 15 € en essence. Ajoutez l'exonération partielle de taxe automobile (Kfz-Steuer) pour les électriques.",
       "L'installation d'une wallbox (11 kW) coûte 1 000 à 2 500 € et recharge une batterie de 60 kWh en une nuit. Dans le Hochtaunuskreis, les bornes publiques se multiplient, mais la recharge à domicile reste deux fois moins chère.",
       "En occasion, une électrique de 2 à 4 ans a déjà subi sa décote : c'est le meilleur rapport prix-autonomie. Vérifiez l'état de la batterie (rapport de santé, SoH) et la garantie constructeur restante, souvent de 8 ans sur la batterie.",
-      "Notre stock comprend des iX3, Tesla Model Y et EQA vérifiés avec batterie garantie. Questions sur l'autonomie réelle ? Écrivez-nous sur WhatsApp au +49 6172 123456."
+      "Notre stock comprend des iX3, Tesla Model Y et EQA vérifiés avec batterie garantie. Questions sur l'autonomie réelle ? Écrivez-nous par e-mail à contact@klardrive.de."
     ]
   },
   {
@@ -221,7 +221,7 @@ const ARTICLES = [
       "Neuf occasions sur dix vendues chez KlarDrive sont en boîte automatique : DSG chez Volkswagen, 8G-DCT chez Mercedes, Steptronic chez BMW, S tronic chez Audi. Confort en ville, consommation optimisée : le marché a tranché.",
       "Chaque technologie a ses règles : les doubles embrayages exigent une vidange tous les 60 000 km environ ; les boîtes à convertisseur sont plus tolérantes mais apprécient une vidange tous les 80 000 à 100 000 km. Une vidange coûte 250 à 500 € et double la durée de vie.",
       "À l'essai, traquez les à-coups au démarrage, les patinages entre 2e et 3e et les voyants de boîte. Exigez les factures de vidange : une boîte sans entretien à 150 000 km est un risque.",
-      "Nos occasions sont diagnostiquées valise incluse, vidanges vérifiées. Un doute sur une boîte ? Appelez le +49 6172 123456 : diagnostic avant achat possible."
+      "Nos occasions sont diagnostiquées valise incluse, vidanges vérifiées. Un doute sur une boîte ? Écrivez à contact@klardrive.de : diagnostic avant achat possible."
     ]
   },
   {
@@ -234,7 +234,7 @@ const ARTICLES = [
       "En Allemagne, l'assurance auto fonctionne par classes de bonus-malus (SF-Klassen) : un jeune conducteur démarre souvent en SF 1/2 ou SF 0, avec des tarifs élevés la première année. Chaque année sans sinistre fait grimper la classe et baisser la prime.",
       "Le choix de la voiture change tout : une petite essence de 90 à 120 ch coûte deux fois moins cher à assurer qu'une berline puissante. Comparez la Typklasse du modèle avant d'acheter : elle détermine le tarif.",
       "Trois astuces : assurer le véhicule au nom d'un parent avec le jeune en conducteur additionnel, choisir une franchise plus élevée, et regrouper assurance auto et habitation chez le même assureur.",
-      "Notre équipe conseille les jeunes conducteurs du Hochtaunuskreis chaque semaine : modèles économiques, assurance, financement dès 139 €/mois. Appelez le +49 6172 123456."
+      "Notre équipe conseille les jeunes conducteurs du Hochtaunuskreis chaque semaine : modèles économiques, assurance, financement dès 139 €/mois. Écrivez à contact@klardrive.de."
     ]
   },
   {
@@ -247,7 +247,7 @@ const ARTICLES = [
       "En Allemagne, pas de date couperet : l'obligation est situationnelle. Dès que verglas, neige fondue ou givre apparaissent, les pneus hiver sont obligatoires sous peine de 60 € d'amende et d'un point à Flensburg — et l'assurance peut refuser d'indemniser en cas d'accident.",
       "Seuls les pneus marqués 3PMSF (flocon dans une montagne à trois pics) sont reconnus ; le simple marquage M+S ne suffit plus. Comptez 400 à 800 € le train complet monté-équilibré pour une berline ou un SUV.",
       "Dans le Taunus, équipez-vous dès octobre : les hauteurs autour de Bad Homburg, Königstein et Usingen gèlent tôt. Vérifiez aussi la roue de secours ou le kit anti-crevaison et le niveau de lave-glace antigel.",
-      "Nos véhicules sont livrés avec des pneus contrôlés et, sur demande, un train hiver monté. Préparez l'hiver avec KlarDrive : +49 6172 123456."
+      "Nos véhicules sont livrés avec des pneus contrôlés et, sur demande, un train hiver monté. Préparez l'hiver avec KlarDrive : contact@klardrive.de."
     ]
   },
   {
@@ -260,7 +260,7 @@ const ARTICLES = [
       "Faire reprendre son ancienne voiture simplifie l'achat : pas d'annonces, pas d'essais avec des inconnus, et la valeur de reprise vient en déduction du prix. Mais une reprise mal préparée peut coûter 1 000 à 2 000 €.",
       "Cinq leviers : un contrôle technique valide de moins de 6 mois ; un carnet d'entretien complet ; une présentation impeccable ; les deux clés et tous les accessoires ; et au moins deux estimations pour négocier.",
       "Méfiez-vous des offres de reprise gonflées qui cachent une remise inexistante sur la nouvelle voiture : comparez toujours le prix net, reprise déduite. Une reprise honnête se fait sur la valeur marché réelle.",
-      "KlarDrive reprend votre véhicule au juste prix avec offre écrite en 24 h. Envoyez photos et kilométrage sur WhatsApp au +49 6172 123456."
+      "KlarDrive reprend votre véhicule au juste prix avec offre écrite en 24 h. Envoyez photos et kilométrage par e-mail à contact@klardrive.de."
     ]
   },
   {
@@ -273,7 +273,7 @@ const ARTICLES = [
       "Pour entrer dans les zones environnementales de Francfort et des grandes villes, la vignette verte est obligatoire : 5 à 15 €, valable à vie du véhicule. Sans elle, 100 € d'amende.",
       "Les interdictions de circulation visent les vieux diesels Euro 4 et moins, et localement certains Euro 5. Un diesel Euro 6 avec AdBlue reste autorisé partout et c'est le seul diesel à acheter en occasion aujourd'hui.",
       "Le diesel garde du sens pour les gros rouleurs : 5 à 6 L/100 km sur autoroute contre 8 à 9 pour une essence équivalente, soit 1 500 € d'économie annuelle à 25 000 km/an. En dessous de 15 000 km/an, préférez l'essence ou l'hybride.",
-      "Notre stock privilégie les diesels Euro 6 récents avec vignette verte fournie. Vérifiez la norme de n'importe quel modèle au +49 6172 123456."
+      "Notre stock privilégie les diesels Euro 6 récents avec vignette verte fournie. Vérifiez la norme de n'importe quel modèle par e-mail à contact@klardrive.de."
     ]
   },
   {
@@ -286,7 +286,7 @@ const ARTICLES = [
       "Un essai de 30 minutes révèle plus qu'une heure d'inspection statique : exigez un démarrage à froid, puis 15 minutes de ville et 15 minutes de voie rapide autour de Bad Homburg ou sur l'A661.",
       "En roulant, vérifiez : direction droite sans tirer, freinage sans vibration, boîte sans à-coups, climatisation froide et chaude, tous les voyants éteints après démarrage, électronique complète et bruits suspects.",
       "À l'arrêt : niveaux d'huile et de refroidissement, usure uniforme des pneus, jeu dans la direction, historique d'entretien et concordance des numéros entre carte grise et châssis. Refusez tout essai limité à un parking.",
-      "Chez KlarDrive, chaque essai est libre et le contrôle final a lieu en votre présence. Réservez votre essai au +49 6172 123456."
+      "Chez KlarDrive, chaque essai est libre et le contrôle final a lieu en votre présence. Réservez votre essai à contact@klardrive.de."
     ]
   }
 ];
