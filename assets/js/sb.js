@@ -75,27 +75,6 @@ async function select(table, order, timeoutMs){
   return Array.isArray(j) ? j : [];
 }
 
-// ---------- écriture publique (formulaire contact : RLS insert anon) ----------
-async function insertPublic(table, row){
-  var c = baseCfg();
-  if(!c.url || !c.key) throw new Error('Supabase non configuré');
-  var r = await fetch(c.url + '/rest/v1/' + table, {
-    method: 'POST',
-    headers: { 'apikey': c.key, 'Content-Type': 'application/json', 'Prefer': 'return=representation' },
-    body: JSON.stringify(row)
-  });
-  return readJson(r);
-}
-
-// ---------- lecture admin (connecté requis) ----------
-async function selectAuthed(table, order, timeoutMs){
-  var q = '/' + table + '?select=*';
-  if(order) q += '&order=' + encodeURIComponent(order);
-  var r = await raw('/rest/v1' + q, { headers: apiHeaders(null, true), timeout: timeoutMs || 8000 });
-  var j = await readJson(r);
-  return Array.isArray(j) ? j : [];
-}
-
 // ---------- écriture admin (connecté requis) ----------
 async function authed(method, path, body, extraHeaders){
   var r = await raw('/rest/v1' + path, { method: method, headers: apiHeaders(extraHeaders, true), body: body ? JSON.stringify(body) : undefined, timeout: 15000 });
@@ -195,8 +174,7 @@ async function deletePhoto(repoPath){
 
 window.SB = {
   configured: configured, cfg: baseCfg, session: session,
-  select: select, selectAuthed: selectAuthed, insertPublic: insertPublic,
-  upsert: upsert, remove: remove,
+  select: select, upsert: upsert, remove: remove,
   signIn: signIn, signOut: signOut, refresh: refresh, me: me,
   uploadPhoto: uploadPhoto, deletePhoto: deletePhoto
 };

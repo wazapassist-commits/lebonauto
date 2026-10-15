@@ -13,7 +13,7 @@
 .admin-tabs{display:flex;gap:.4rem;margin:1.2rem 0}
 .admin-tab{border:1px solid var(--line);background:#fff;border-radius:999px;padding:.55rem 1.2rem;font:inherit;font-weight:600;font-size:.8rem;cursor:pointer}
 .admin-tab.on{background:var(--dark);color:#fff;border-color:var(--dark)}
-.admin-stats{display:grid;grid-template-columns:repeat(5,1fr);gap:.8rem;margin-bottom:1.2rem}
+.admin-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin-bottom:1.2rem}
 .admin-stat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:.9rem 1.1rem}
 .admin-stat b{font-family:var(--display);font-size:1.5rem;display:block}
 #auth-email,#auth-pass{letter-spacing:normal !important;text-align:left !important;font-size:1rem !important}
@@ -84,13 +84,11 @@
     <div class="admin-stat"><b id="st-value">—</b><span>Valeur du stock</span></div>
     <div class="admin-stat"><b id="st-avg">—</b><span>Prix moyen</span></div>
     <div class="admin-stat"><b id="st-blog">—</b><span>Articles blog</span></div>
-    <div class="admin-stat"><b id="st-msg">—</b><span>Messages non lus</span></div>
   </div>
 
   <div class="admin-tabs">
     <button class="admin-tab on" data-tab="veh">Véhicules</button>
     <button class="admin-tab" data-tab="blog">Blog</button>
-    <button class="admin-tab" data-tab="msg">Messages <b id="msg-badge" style="display:none;background:#C8102E;color:#fff;border-radius:999px;padding:.05rem .5rem;font-size:.7rem">0</b></button>
     <button class="admin-tab" data-tab="cfg">Paramètres</button>
   </div>
 
@@ -102,13 +100,6 @@
     <div class="veh-grid" id="admin-veh-grid"></div>
   </div>
 
-  <div id="tab-msg" hidden>
-    <div class="admin-toolbar">
-      <button class="btn btn-dark" id="msg-reload">Actualiser</button>
-      <span class="help">Les messages du formulaire contact arrivent ici (table <b>messages</b>).</span>
-    </div>
-    <div id="admin-msg-list"></div>
-  </div>
 
   <div id="tab-blog" hidden>
     <div class="admin-toolbar">

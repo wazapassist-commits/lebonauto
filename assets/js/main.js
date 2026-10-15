@@ -58,36 +58,14 @@ document.addEventListener('click',e=>{
 })();
 // Année footer
 document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());
-// Formulaire -> messagerie Supabase (repli e-mail si base absente/injoignable)
+// Formulaire -> e-mail (mailto)
 function handleContact(e){
   e.preventDefault();
-  sendContactMessage(e.target);
-  return false;
-}
-async function sendContactMessage(form){
-  const f = new FormData(form);
-  const row = {
-    nom: (f.get('nom') || '').toString().slice(0, 120),
-    email: (f.get('email') || '').toString().slice(0, 160),
-    tel: (f.get('tel') || '').toString().slice(0, 40),
-    sujet: (f.get('sujet') || '').toString().slice(0, 120),
-    message: (f.get('message') || '').toString().slice(0, 2000)
-  };
-  const okEl = document.getElementById('form-ok');
-  const show = function(t){ okEl.textContent = t; okEl.style.display = 'block'; };
-  const T = function(k){ try{ return window.LBA_I18N.t(k); }catch(err){ return k; } };
-  show(T('form.sending'));
-  try {
-    if(!(window.SB && SB.configured())) throw new Error('no-sb');
-    await SB.insertPublic('messages', row);
-    try{ form.reset(); }catch(err2){}
-    show(T('form.sent'));
-  } catch(err) {
-    const subject = 'Contact KlarDrive - ' + (row.sujet || '');
-    const body = 'Nom: ' + row.nom + '\nE-mail: ' + row.email + '\nTéléphone: ' + row.tel + '\nSujet: ' + row.sujet + '\nMessage: ' + row.message;
-    window.location.href = 'mailto:contact@klardrive.de?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    show(T('form.sent.mail'));
-  }
+  const f = new FormData(e.target);
+  const subject = 'Contact KlarDrive - ' + (f.get('sujet')||'');
+  const body = 'Nom: ' + (f.get('nom')||'') + '\nE-mail: ' + (f.get('email')||'') + '\nT\u00e9l\u00e9phone: ' + (f.get('tel')||'') + '\nSujet: ' + (f.get('sujet')||'') + '\nMessage: ' + (f.get('message')||'');
+  window.location.href = 'mailto:contact@klardrive.de?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  document.getElementById('form-ok').style.display='block';
   return false;
 }
 window.handleContact = handleContact;

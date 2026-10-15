@@ -9,10 +9,28 @@ const ARTICLES = [
     "img": "assets/img/bmw-x1.jpg",
     "resume": "Acompte de 30 %, durées de 6 à 84 mois, acceptation en 24 h : le guide du financement auto simple et sans surprise.",
     "contenu": [
-      "Le financement auto se résume à trois chiffres : l'acompte (30 % à la réservation chez KlarDrive), la durée (de 6 à 84 mois) et la mensualité. Plus la durée est longue, plus la mensualité baisse : nos offres démarrent à 139 €/mois.",
-      "Préparez un dossier solide : pièce d'identité, justificatifs de revenus des 3 derniers mois et relevés bancaires. Une acceptation de principe arrive généralement en 24 h, sans frais cachés ni engagement.",
-      "Comparez toujours le coût total du crédit, pas seulement la mensualité : taux, assurance emprunteur et frais de dossier. Un apport plus élevé réduit le montant financé et le coût des intérêts.",
-      "Une simulation en 5 minutes ? Écrivez-nous par e-mail à contact@klardrive.de : notre équipe à Bad Homburg vor der Höhe monte votre dossier de financement."
+      "Le financement auto se résume à trois chiffres : l'acompte, la durée et la mensualité. Ce guide vous aide à calibrer les trois sans mauvaise surprise, avec des exemples chiffrés.",
+      "## L'apport : combien mettre ?",
+      "Chez KlarDrive, la réservation demande 30 % d'acompte. Au-delà, tout apport supplémentaire réduit le montant financé — et donc le coût total des intérêts. Exemple sur 20 000 € : avec 6 000 € d'apport, vous financez 14 000 € ; avec 10 000 €, seulement 10 000 €.",
+      "## La durée : 6 à 84 mois, comment choisir ?",
+      "- **12–36 mois** : mensualités élevées, coût total minimum — idéal si le budget suit",
+      "- **48–60 mois** : l'équilibre le plus choisi (ex. 14 000 € sur 60 mois ≈ 260 €/mois selon taux)",
+      "- **72–84 mois** : mensualités dès 139 €/mois, mais coût total supérieur — à réserver aux petits budgets mensuels",
+      "Règle d'or : la durée du crédit ne devrait jamais dépasser la durée de détention prévue du véhicule.",
+      "## Le dossier qui passe en 24 h",
+      "Préparez : pièce d'identité, justificatifs de revenus des 3 derniers mois, relevés bancaires récents, justificatif de domicile. Un dossier complet obtient généralement une acceptation de principe en 24 h. Les rejets viennent le plus souvent de découverts répétés ou d'un taux d'endettement au-delà de 35 %.",
+      "## Les pièges à éviter",
+      "- Ne comparez jamais que la mensualité : exigez le **TAEG et le coût total**",
+      "- Refusez les assurances emprunteur imposées : la délégation est un droit",
+      "- Méfiez-vous des « sans apport, sans justificatif » : les taux explosent",
+      "## Simulez avec nous",
+      "## LOA, LLD ou crédit classique ?",
+      "Trois formules coexistent, pour trois profils :",
+      "- **Crédit classique** : vous êtes propriétaire dès le premier jour, libre de revendre quand vous voulez — notre recommandation dans 80 % des cas",
+      "- **LOA (location avec option d'achat)** : mensualités plus basses, valeur de rachat fixée à l'avance — intéressant si vous changez de voiture tous les 3 ans",
+      "- **LLD (location longue durée)** : entretien et assistance inclus, mais vous ne possédez jamais le véhicule",
+      "Méfiez-vous des LOA aux valeurs de rachat gonflées : le coût total dépasse souvent le crédit classique. Demandez toujours les trois simulations chiffrées avant de signer.",
+      "Envoyez-nous le véhicule visé et votre apport sur [notre bon de commande](bon-de-commande.html) : notre équipe à Bad Homburg vor der Höhe monte votre dossier et vous répond en moins d'une heure ouvrée, par e-mail à contact@klardrive.de."
     ]
   },
   {
@@ -35,10 +53,26 @@ const ARTICLES = [
     "img": "assets/img/tesla-y.jpg",
     "resume": "Transport assuré, numéro de suivi, contrôle en votre présence : comment votre voiture arrive devant chez vous, de Bad Homburg à Königstein.",
     "contenu": [
-      "Commander une voiture sans se déplacer, c'est possible : devis validé en ligne, signature électronique et acompte sécurisé de 30 %. Le véhicule est bloqué pour vous et la préparation finale commence aussitôt.",
-      "Dans le Hochtaunuskreis, la livraison prend 5 jours ouvrés : transport assuré et sécurisé, numéro de suivi transmis par e-mail et SMS. Nous livrons à Bad Homburg vor der Höhe, Oberursel, Friedrichsdorf, Kronberg, Königstein, Usingen et Wehrheim.",
-      "Le jour J, le contrôle final a lieu en votre présence : carrosserie, équipements, papiers et ordinateur de bord réglé en allemand. Non-conformité majeure ? Échange ou remboursement immédiat, plus 15 jours de rétractation.",
-      "Prêt à recevoir votre voiture à domicile ? Écrivez à KlarDrive à contact@klardrive.de : réponse en moins d'une heure ouvrée."
+      "Commander une voiture sans se déplacer, la recevoir devant chez soi 5 jours plus tard, contrôle fait en votre présence : c'est le mode d'achat que 8 clients sur 10 choisissent chez KlarDrive. Voici exactement comment ça se passe.",
+      "## Étape 1 : la réservation en ligne",
+      "Vous choisissez votre véhicule sur le [catalogue](catalogue.html), validez le devis détaillé, signez électroniquement et versez l'acompte sécurisé de 30 %. Le véhicule est immédiatement bloqué à votre nom : il ne sera proposé à personne d'autre. Comptez 10 minutes, sans vous déplacer.",
+      "## Étape 2 : la préparation (jours 1 à 3)",
+      "La préparation finale démarre aussitôt :",
+      "- Contrôle des 250 points et diagnostic électronique complet",
+      "- Préparation mécanique et carrosserie si besoin",
+      "- Nettoyage professionnel intérieur + extérieur",
+      "- Constitution du dossier papiers : COC, HU, historique, immatriculation",
+      "Vous recevez le récapitulatif et la date de livraison prévisionnelle par e-mail.",
+      "## Étape 3 : le transport suivi (jours 4 à 5)",
+      "Le véhicule voyage sur camion assuré avec **numéro de suivi transmis par e-mail et SMS**. Nous livrons à Bad Homburg vor der Höhe, Oberursel, Friedrichsdorf, Kronberg, Königstein, Usingen et Wehrheim — et partout en Europe sous 3 à 5 jours.",
+      "## Étape 4 : la remise en votre présence",
+      "Le jour J, 30 minutes ensemble : tour de la carrosserie, vérification des équipements et des options commandées, contrôle des papiers, réglage de l'ordinateur de bord en allemand. Vous signez le procès-verbal de remise. Non-conformité majeure ? Échange ou remboursement immédiat, plus 15 jours de rétractation légale.",
+      "## Combien ça coûte ?",
+      "La livraison dans le Hochtaunuskreis est incluse dans nos offres du moment ; ailleurs en Europe, comptez 200 € de frais fixes tout compris. Aucun autre frais caché : le prix du [bon de commande](bon-de-commande.html) est le prix final.",
+      "## Livraison en Suisse et en Europe : la douane en plus",
+      "La Suisse étant hors UE, la livraison vers Zurich, Berne ou Genève ajoute une étape : le dédouanement. Droits de douane, TVA suisse de 8,1 % et documents d'importation : comptez 300 à 500 € de frais et 5 à 7 jours ouvrés au lieu de 5. Nous gérons toute la paperasse — [plus de détails dans notre FAQ](faq.html).",
+      "Partout ailleurs en Europe (France, Espagne, Portugal, Autriche…), c'est le même prix et le même délai que l'Allemagne : transport assuré à 200 € fixes, suivi par e-mail et SMS, contrôle final en votre présence.",
+      "Prêt à recevoir votre voiture à domicile ? [Contactez-nous](contact.html) : réponse en moins d'une heure ouvrée."
     ]
   },
   {
@@ -61,10 +95,29 @@ const ARTICLES = [
     "img": "assets/img/mercedes-glc.jpg",
     "resume": "COC, HU, Zulassungsstelle, Kennzeichen : les 4 étapes pour immatriculer un véhicule importé, gérées par KlarDrive.",
     "contenu": [
-      "Immatriculer un véhicule importé en Allemagne (Zulassung) exige quatre éléments : le certificat de conformité européen (COC), un contrôle technique (HU) de moins de 6 mois, une pièce d'identité avec justificatif de domicile et une attestation d'assurance (eVB-Nummer).",
-      "Le passage à la Zulassungsstelle prend ensuite quelques jours : le véhicule reçoit ses plaques (Kennzeichen) et sa carte grise allemande. Sans COC conforme, l'immatriculation est refusée : vérifiez-le avant tout achat.",
-      "Chez KlarDrive, vous n'avez rien à faire : notre service prépare le dossier COC, organise la HU et effectue les démarches en préfecture. Votre voiture est livrée à domicile dans le Hochtaunuskreis déjà immatriculée, en 5 jours.",
-      "Un doute sur les papiers d'un véhicule ? Notre équipe à Bad Homburg vor der Höhe vous répond par e-mail à contact@klardrive.de, avant, pendant et après votre achat."
+      "Immatriculer un véhicule importé en Allemagne (Zulassung) fait peur à beaucoup d'acheteurs — à tort. Avec un dossier complet, c'est une formalité de quelques jours. Voici les 4 étapes, les pièces exactes et les erreurs qui font perdre des semaines.",
+      "## Les 4 pièces obligatoires",
+      "Sans l'un de ces documents, la Zulassungsstelle refuse l'immatriculation :",
+      "- Le **certificat de conformité européen (COC)** : fourni par le constructeur, il prouve que le véhicule respecte les normes UE",
+      "- Un **contrôle technique (HU)** de moins de 6 mois, passé en Allemagne",
+      "- Une **pièce d'identité** avec justificatif de domicile allemand (Meldebescheinigung)",
+      "- Une **attestation d'assurance (eVB-Nummer)** délivrée par votre assureur en 5 minutes",
+      "## Le passage en préfecture, étape par étape",
+      "### 1. Réserver un créneau",
+      "La plupart des Zulassungsstellen (dont celle de Bad Homburg) fonctionnent sur rendez-vous en ligne. Comptez 3 à 10 jours d'attente selon la période : anticipez.",
+      "### 2. Le jour J",
+      "Présentez le dossier + les plaques d'immatriculation souhaitées (réservables en ligne, ~13 € la paire frappée). L'agent vérifie, encaisse ~30 € de taxes et édite la carte grise allemande (Zulassungsbescheinigung Teil I et II).",
+      "### 3. Rouler légal",
+      "Vous repartez avec vos plaques posées et un véhicule 100 % en règle. Conservez le COC et les rapports HU avec les papiers : ils valoriseront la revente.",
+      "## Les 3 erreurs qui bloquent tout",
+      "- **COC manquant ou non conforme** : sans lui, il faut une réception à titre isolé (Einzelabnahme) au TÜV, 500 à 1 500 € et des semaines de délai",
+      "- **Facture d'achat floue** : la douane et le fisc exigent une traçabilité TVA claire, surtout pour un reimport",
+      "- **Assurance oubliée** : sans eVB-Nummer, pas d'immatriculation possible le jour J",
+      "## La solution zéro paperasse",
+      "## Cas particulier : véhicule déjà immatriculé en France",
+      "Vous faites reprendre votre voiture française ou vous déménagez en Allemagne avec ? La procédure change légèrement : radiation (Stilllegung ne s'applique pas), restitution des plaques françaises en préfecture, puis Zulassung classique avec le certificat de conformité du constructeur. Prévoyez le certificat de cession et un justificatif de domicile allemand.",
+      "Bonne nouvelle : les véhicules français récents ont presque toujours un COC disponible gratuitement auprès du constructeur. Envoyez-nous la carte grise par e-mail à contact@klardrive.de : nous vérifions la faisabilité avant tout engagement.",
+      "Chez KlarDrive, vous ne touchez à aucun formulaire : notre service prépare le dossier COC, organise la HU et effectue les démarches en préfecture. Votre voiture est [livrée à domicile déjà immatriculée](bad-homburg.html), en 5 jours dans le Hochtaunuskreis. Un doute sur des papiers ? Écrivez à contact@klardrive.de, réponse en moins d'une heure ouvrée."
     ]
   },
   {
@@ -74,17 +127,39 @@ const ARTICLES = [
     "img": "assets/img/bmw-m3-competition.jpg",
     "resume": "Spécification allemande, historique vérifié, économies de 15 à 30 % : comment le reimport UE fait baisser le prix sans baisser la qualité.",
     "contenu": [
-      "Un véhicule en reimport est une voiture neuve ou récente achetée dans un autre pays de l'UE puis immatriculée en Allemagne. Même usine, même finition M Sport ou AMG Line, même qualité : seule la filière d'achat change, et le prix baisse de 15 à 30 %.",
-      "Chez KlarDrive, tous nos reimports sont en spécification allemande : ordinateur de bord en allemand, carnet d'entretien complet et historique vérifié. Chaque véhicule passe notre contrôle de 250 points avant la mise en vente.",
-      "Les papiers européens (COC, factures, carnet) sont fournis et nous gérons la Zulassung : contrôle technique (HU), passage en préfecture et plaques. Vous recevez une voiture prête à rouler, immatriculée à Bad Homburg vor der Höhe.",
-      "Une question sur un modèle en reimport ? Écrivez-nous par e-mail à contact@klardrive.de : réponse en moins d'une heure ouvrée, devis détaillé sans engagement."
+      "Un véhicule en reimport est une voiture neuve ou récente achetée dans un autre pays de l'UE puis immatriculée en Allemagne. Même usine, même finition M Sport ou AMG Line, même qualité : seule la filière d'achat change, et le prix baisse de 15 à 30 %. Ce guide explique comment ça marche et comment en profiter sans risque.",
+      "## Pourquoi le reimport est moins cher",
+      "Les constructeurs fixent des tarifs différents selon les pays : pouvoir d'achat, concurrence locale, fiscalité. Un BMW X5 vendu 70 000 € en Allemagne peut partir à 58 000 € dans un autre pays membre. Les mandataires comme KlarDrive achètent là où c'est le moins cher et rapatrient le véhicule : vous payez le prix européen, pas le prix allemand.",
+      "Mais attention : un prix bas seul ne prouve rien. Un reimport sérieux cumule toujours trois preuves :",
+      "- Une **spécification allemande** (ordinateur de bord en allemand, options conformes au marché DE)",
+      "- Un **historique complet** : carnet d'entretien tamponné, factures, rapports de contrôle",
+      "- Un **certificat de conformité européen (COC)** indispensable à la [Zulassung](bad-homburg.html)",
+      "## Les pièges à éviter",
+      "Le reimport attire aussi les vendeurs douteux. Méfiez-vous si le vendeur refuse le diagnostic électronique indépendant, si le COC est « en cours » depuis des semaines, ou si le kilométrage ne colle pas avec l'usure. Exigez toujours un contrat écrit mentionnant le kilométrage, la garantie et le délai de livraison.",
+      "Chez KlarDrive, chaque reimport passe notre contrôle de 250 points : moteur, boîte, électronique, châssis, puis diagnostic valise. Non-conformité majeure le jour de la remise ? Échange ou remboursement immédiat.",
+      "## Quelles économies attendre ?",
+      "Sur les modèles allemands demandés, l'écart constaté va de 15 à 30 % par rapport au prix concessionnaire :",
+      "- **BMW X5, X3** : 8 000 à 15 000 € d'écart sur les versions M Sport récentes",
+      "- **Mercedes GLC, Classe V** : 7 000 à 12 000 € d'écart en finition AMG Line",
+      "- **Audi Q3, Q5** : 6 000 à 10 000 € d'écart en S line",
+      "Consultez nos [arrivages récents](catalogue.html) : chaque annonce précise l'origine, l'historique et la garantie restante.",
+      "## Reimport et garantie : ce qui vous couvre",
+      "Un reimport vendu par un professionnel allemand bénéficie de la garantie légale de 12 mois minimum, comme n'importe quelle occasion. Mieux : sur les véhicules de moins de 4 ans, la **garantie constructeur restante** s'applique dans tout le réseau européen, quel que soit le pays d'achat. Vérifiez simplement la date de première immatriculation.",
+      "## Pourquoi passer par KlarDrive ?",
+      "## Reimport et fiscalité : ce que vous payez vraiment",
+      "Le prix affiché chez KlarDrive est un prix TTC clé en main : il inclut la TVA allemande applicable, les frais de rapatriement et la [Zulassung](bad-homburg.html). Pas de mauvaise surprise à la livraison : le montant du [bon de commande](bon-de-commande.html) est définitif.",
+      "Deux cas de figure :",
+      "- **Véhicule de plus de 6 mois ou 6 000 km** : considéré comme occasion au sens fiscal, pas de TVA supplémentaire à l'immatriculation",
+      "- **Véhicule quasi neuf** : la TVA du pays d'immatriculation peut s'appliquer — nous le vérifions pour vous avant signature et l'indiquons noir sur blanc",
+      "Notre service s'occupe aussi du quitus fiscal quand il est requis. Vous signez un prix, vous payez ce prix.",
+      "Nous gérons toute la chaîne : sourcing en UE, contrôle 250 points, [Zulassung complète](bad-homburg.html) (COC, HU, plaques) et [livraison à domicile en 5 jours](bad-homburg.html) dans le Hochtaunuskreis. Une question sur un modèle ? Écrivez-nous par e-mail à contact@klardrive.de : réponse en moins d'une heure ouvrée, devis détaillé sans engagement."
     ]
   },
   {
     "slug": "acheter-a-distance-confiance",
     "titre": "Acheter sa voiture à distance en toute confiance",
     "date": "2026-10-02",
-    "img": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=900&q=70",
+    "img": "assets/img/mercedes-glb.jpg",
     "resume": "Acompte sécurisé, suivi de livraison, contrôle à la remise et rétractation : comment acheter sereinement sans vous déplacer.",
     "contenu": [
       "Acheter un véhicule à distance est devenu simple et sûr à condition de passer par un professionnel transparent. Chez KlarDrive, tout commence par un devis détaillé puis une signature électronique, avec un acompte sécurisé de 30 % pour réserver le véhicule.",
@@ -97,7 +172,7 @@ const ARTICLES = [
     "slug": "documents-verifier-occasion",
     "titre": "Occasion : les 6 documents à vérifier avant d'acheter",
     "date": "2026-09-26",
-    "img": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=70",
+    "img": "assets/img/audi-a3.jpg",
     "resume": "Carte grise, non-gage, contrôle technique, carnet d'entretien : la check-list des documents qui sécurisent votre achat d'occasion.",
     "contenu": [
       "Un achat d'occasion serein repose d'abord sur les documents. Exigez systématiquement l'immatriculation du véhicule, le certificat de non-gage officiel et un contrôle technique de moins de 6 mois.",
@@ -110,7 +185,7 @@ const ARTICLES = [
     "slug": "acheter-voiture-budget",
     "titre": "10 conseils pour acheter une bonne voiture tout en restant dans son budget",
     "date": "2026-09-19",
-    "img": "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=900&q=70",
+    "img": "assets/img/bmw-serie2.jpg",
     "resume": "Définir un budget réaliste, comparer les modèles et miser sur l'occasion récente avec historique vérifié : le guide pour acheter sans dépasser son budget.",
     "contenu": [
       "Acheter une voiture nécessite une préparation rigoureuse pour éviter les mauvaises surprises financières. Il faut définir un budget réaliste en analysant revenus, dépenses fixes et variables, sans oublier assurance, entretien, carburant et réparations.",
@@ -123,7 +198,7 @@ const ARTICLES = [
     "slug": "bien-choisir-occasion",
     "titre": "Comment bien choisir sa voiture d'occasion ?",
     "date": "2026-09-19",
-    "img": "https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=900&q=70",
+    "img": "assets/img/mercedes-cla.jpg",
     "resume": "Berline, SUV ou citadine ? Fiabilité, inspection, essai routier et négociation : la méthode pour sécuriser votre achat d'occasion.",
     "contenu": [
       "Choisir une voiture d'occasion commence par définir ses besoins : trajets quotidiens, familiaux ou loisirs, et son budget global avec assurance, entretien et carburant.",
@@ -136,7 +211,7 @@ const ARTICLES = [
     "slug": "hybride-ou-electrique",
     "titre": "Véhicule hybride ou électrique : que choisir ?",
     "date": "2026-09-19",
-    "img": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=900&q=70",
+    "img": "assets/img/toyota-chr.jpg",
     "resume": "Autonomie, coût, entretien, écologie : le comparatif pour choisir entre hybride et électrique selon votre usage quotidien et votre budget.",
     "contenu": [
       "Les hybrides combinent moteur thermique et électrique pour optimiser l'énergie et réduire les émissions, tandis que les électriques fonctionnent uniquement sur batterie, sans émissions à l'usage.",
@@ -149,7 +224,7 @@ const ARTICLES = [
     "slug": "entretenir-sa-voiture",
     "titre": "Entretenir sa voiture : les gestes essentiels",
     "date": "2026-09-19",
-    "img": "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=900&q=70",
+    "img": "assets/img/cupra-formentor.jpg",
     "resume": "Huile, pneus, freins, entretien saisonnier : les contrôles simples qui prolongent la durée de vie, la sécurité et la valeur de votre véhicule.",
     "contenu": [
       "Un véhicule bien entretenu est plus sûr, plus économique et garde une meilleure valeur de revente.",
@@ -157,8 +232,7 @@ const ARTICLES = [
       "Restez attentif aux bruits, vibrations ou voyants inhabituels. L'entretien saisonnier est essentiel : batterie et climatisation au printemps, refroidissement et freins en été, visibilité en automne, chauffage et freins en hiver.",
       "En cas de choc ou de panne complexe, confiez votre véhicule à un professionnel pour un diagnostic et un entretien préventif. Écrivez à KlarDrive à contact@klardrive.de."
     ]
-  }
-,
+  },
   {
     "slug": "controle-technique-hu-allemagne",
     "titre": "Contrôle technique en Allemagne (HU) : prix, délais et points vérifiés",
@@ -192,10 +266,29 @@ const ARTICLES = [
     "img": "assets/img/toyota-rav4-awd.jpg",
     "resume": "Coffre, places, fiabilité, budget : le comparatif des 5 SUV familiaux les plus demandés, disponibles chez KlarDrive.",
     "contenu": [
-      "Le SUV familial doit cocher quatre cases : un coffre de 500 L minimum, de vraies places arrière, une fiabilité éprouvée et un budget maîtrisé. En 2026, cinq modèles dominent les recherches : BMW X1, Audi Q3, VW Tiguan, Toyota RAV 4 et Mercedes GLC.",
-      "Le X1 et le Q3 séduisent par leurs finitions premium et leurs motorisations efficientes. Le Tiguan reste le roi du rapport espace-prix avec son coffre modulable. Le RAV 4 hybride affiche la meilleure fiabilité et la consommation la plus basse. Le GLC joue la carte du confort haut de gamme.",
-      "En occasion récente de moins de 4 ans, comptez 18 000 à 30 000 € selon le modèle et le kilométrage. Privilégiez les versions boîte automatique avec historique d'entretien constructeur complet.",
-      "Tous ces modèles sont en stock chez KlarDrive à Bad Homburg vor der Höhe, contrôlés sur 250 points et garantis 12 mois minimum. Essayez-les : écrivez à contact@klardrive.de."
+      "Le SUV familial doit cocher quatre cases : un coffre de 500 L minimum, de vraies places arrière, une fiabilité éprouvée et un budget maîtrisé. Nous avons comparé les 5 modèles les plus demandés en 2026, tous disponibles en occasion récente chez KlarDrive.",
+      "## BMW X1 : le premium efficient",
+      "Le X1 sDrive (diesel 150 ch ou hybride) combine finition M Sport, boîte auto douce et ~5 L/100 km. Coffre 505 L, banquette coulissante : parfait pour 2 enfants + poussette. En occasion 2022-2023 sous 60 000 km, comptez 20 000 à 26 000 €. [Voir nos X1](catalogue.html)",
+      "## Audi Q3 : le technologique",
+      "Virtual cockpit de série, S line valorisante à la revente, 2.0 TDI sobre ou 35 TFSI essence. Le Q3 Sportback ajoute le style coupé sans sacrifier le coffre (530 L). Budget occasion récente : 22 000 à 30 000 €.",
+      "## VW Tiguan : le rationnel",
+      "Le roi du rapport espace/prix : coffre jusqu'à 615 L, modularité record, réseau d'entretien dense et pas cher. Le 2.0 TDI 150 ch R Line 2021-2022 se négocie entre 18 000 et 24 000 €. Le choix malin des gros rouleurs familiaux.",
+      "## Toyota RAV 4 Hybride : le fiable",
+      "La référence fiabilité : hybride éprouvé, 218 ch, transmission intégrale disponible, consommation réelle sous 6 L/100 km. Le RAV 4 décote lentement : une bonne nouvelle à la revente. Budget : 18 000 à 25 000 € pour un 2021-2022 entretenu Toyota.",
+      "## Mercedes GLC : le confortable",
+      "Le plus cossu du comparatif : sièges enveloppants, silence de roulement, 4MATIC rassurante l'hiver dans le Taunus. Visez les finitions AMG Line avec caméra 360°. Budget : 24 000 à 32 000 € en 2021-2022.",
+      "## Notre verdict",
+      "- **Petit budget, gros espace** : Tiguan",
+      "- **Fiabilité maximale** : RAV 4 Hybride",
+      "- **Plaisir premium** : X1 ou Q3",
+      "- **Confort roi** : GLC",
+      "## Essence, diesel ou hybride : que choisir en SUV ?",
+      "Le choix du carburant dépend de votre kilométrage annuel :",
+      "- **Moins de 15 000 km/an** : essence ou hybride — entretien simple, vignette verte garantie, parfait pour le Taunus",
+      "- **15 000 à 25 000 km/an** : hybride (RAV 4, X1 xDrive25e) — le surcoût se rentabilise en 3 ans",
+      "- **Plus de 25 000 km/an** : diesel Euro 6 (Tiguan TDI, X1 diesel) — 5 à 6 L/100 km sur autoroute",
+      "Évitez les vieux diesels Euro 4/5 : interdits dans de plus en plus de centres-villes allemands. Tous nos diesels sont Euro 6 avec vignette verte fournie.",
+      "Tous ces modèles sont en stock à Bad Homburg vor der Höhe, contrôlés sur 250 points et garantis 12 mois minimum. [Essayez-les](contact.html) : réponse en moins d'une heure ouvrée."
     ]
   },
   {

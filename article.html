@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Article | KlarDrive</title><link rel="icon" type="image/png" href="assets/img/logo.png?v=25">
-<link rel="stylesheet" href="assets/css/style.css?v=23"></head>
+<link rel="stylesheet" href="assets/css/style.css?v=23"><style>
+#article h2{font-size:1.35rem;margin:2rem 0 .7rem}
+#article h3{font-size:1.1rem;margin:1.4rem 0 .5rem}
+#article ul{margin:.4rem 0 1rem;padding-left:1.2rem;list-style:disc}
+#article li{margin-bottom:.4rem}
+#article p{margin:0 0 1rem;color:#2A3346}
+#article a{color:var(--gold-deep);font-weight:600}
+</style>
+</head>
 <body>
 <header class="header"><div class="container nav">
 <a class="brand" href="index.html"><img src="assets/img/logo.png?v=25" alt="KlarDrive — Bad Homburg vor der Höhe"></a>
@@ -26,6 +34,19 @@
 <script>
 function T(k){ try{ return window.LBA_I18N.t(k); }catch(e){ return k; } }
 function bT(a,f){ try{ var v = window.LBA_I18N.blog(window.LBA_I18N.get(), a.slug, f); if(v) return v; }catch(e){} return a[f]; }
+function linkify(s){ return String(s).replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>'); }
+function mdBlocks(contenu){
+  var html = '', inList = false;
+  function closeList(){ if(inList){ html += '</ul>'; inList = false; } }
+  contenu.forEach(function(p){
+    if(p.indexOf('### ') === 0){ closeList(); html += '<h3>' + linkify(p.slice(4)) + '</h3>'; }
+    else if(p.indexOf('## ') === 0){ closeList(); html += '<h2>' + linkify(p.slice(3)) + '</h2>'; }
+    else if(p.indexOf('- ') === 0){ if(!inList){ html += '<ul>'; inList = true; } html += '<li>' + linkify(p.slice(2)) + '</li>'; }
+    else { closeList(); html += '<p>' + linkify(p) + '</p>'; }
+  });
+  closeList();
+  return html;
+}
 const slug = new URLSearchParams(location.search).get('slug');
 function renderArticle(){
 const a = ARTICLES.find(x=>x.slug===slug) || ARTICLES[0];
@@ -34,7 +55,7 @@ document.getElementById('article').innerHTML =
 '<p class="meta">'+a.date.split('-').reverse().join('/')+' · Par KlarDrive · <svg class="ic gold"><use href="#i-eye"/></svg> <b data-visitors>18</b></p>'
 +'<h1>'+bT(a,'titre')+'</h1>'
 +'<img src="'+a.img+'" alt="'+bT(a,'titre')+'" style="border-radius:16px;margin:1rem 0">'
-+a.contenu.map(function(p){return '<p>'+p+'</p>';}).join('');
++mdBlocks(a.contenu);
 document.getElementById('others').innerHTML = ARTICLES.filter(x=>x.slug!==a.slug).slice(0,3).map(function(o){
 return '<div class="card"><img src="'+o.img+'" alt="'+bT(o,'titre')+'" loading="lazy" style="aspect-ratio:16/9;object-fit:cover;width:100%"><div class="card-body">'
 +'<h3 style="font-size:1rem">'+bT(o,'titre')+'</h3>'
