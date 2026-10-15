@@ -1,5 +1,5 @@
 // i18n — KlarDrive (DE par défaut / FR / EN / ES / PT)
-// Langue persistée : localStorage 'lba-lang' + ?lang= prioritaire, sinon navigateur, sinon allemand.
+// Priorité : ?lang=, puis choix mémorisé, puis langue du navigateur, sinon allemand.
 (function(){
 "use strict";
 var SUPPORTED = ['de','fr','en','es','pt'];
@@ -148,6 +148,9 @@ fr: {
   'b.cta.sub':"Écrivez-nous par e-mail, réponse en moins d'1h ouvrée.",
   'wa.msg':"Bonjour KlarDrive, je suis intéressé par",
   'wa.msg.end':"Est-il disponible ?",
+  'v.sum':"{m} {mo}{ver} – année {y}, {km}, {f}, {b}, {p}. Historique vérifié, contrôle technique valide, garantie 12 mois minimum.",
+  'gear.auto':"Automatique",
+  'gear.man':"Manuelle",
   'form.email':"E-mail",
   'form.email.ph':"vous@exemple.fr",
   'form.sending':"Envoi en cours…",
@@ -413,6 +416,9 @@ en: {
   'b.cta.sub':"Email us, reply in under 1 business hour.",
   'wa.msg':"Hello KlarDrive, I'm interested in",
   'wa.msg.end':"Is it available?",
+  'v.sum':"{m} {mo}{ver} – model year {y}, {km}, {f}, {b}, {p}. Verified history, valid inspection, minimum 12-month warranty.",
+  'gear.auto':"Automatic",
+  'gear.man':"Manual",
   'form.email':"Email",
   'form.email.ph':"you@example.com",
   'form.sending':"Sending…",
@@ -678,6 +684,9 @@ es: {
   'b.cta.sub':"Escríbanos por email, respuesta en menos de 1h laborable.",
   'wa.msg':"Hola KlarDrive, estoy interesado en",
   'wa.msg.end':"¿Sigue disponible?",
+  'v.sum':"{m} {mo}{ver} – año {y}, {km}, {f}, {b}, {p}. Historial verificado, inspección válida, garantía mínima de 12 meses.",
+  'gear.auto':"Automático",
+  'gear.man':"Manual",
   'mo.doc1':"Tras la cita con el <b>notario</b>, que presenta los estatutos ante el tribunal. Plazo 2–6 semanas. Verificable en <b>handelsregister.de</b>.",
   'mo.doc2':"Primer trámite presencial: activa automáticamente el cuestionario fiscal del <b>Finanzamt</b>. Llevar documento de identidad + contrato de alquiler.",
   'mo.doc3':"Solicitud <b>gratuita en línea</b> en la web del BZSt tras recibir el Steuernummer (vía ELSTER). Imprescindible para comprar sin IVA en la UE y facturar sus reimportaciones.",
@@ -938,6 +947,9 @@ pt: {
   'b.cta.sub':"Escreva-nos por email, resposta em menos de 1h útil.",
   'wa.msg':"Olá KlarDrive, estou interessado em",
   'wa.msg.end':"Ainda está disponível?",
+  'v.sum':"{m} {mo}{ver} – ano {y}, {km}, {f}, {b}, {p}. Histórico verificado, inspeção válida, garantia mínima de 12 meses.",
+  'gear.auto':"Automático",
+  'gear.man':"Manual",
   'mo.doc1':"Após a ida ao <b>notário</b>, que entrega os estatutos no tribunal. Prazo 2–6 semanas. Verificável em <b>handelsregister.de</b>.",
   'mo.doc2':"Primeiro passo presencial: ativa automaticamente o questionário fiscal do <b>Finanzamt</b>. Levar documento de identidade + contrato de arrendamento.",
   'mo.doc3':"Pedido <b>gratuito online</b> no site do BZSt após receber o Steuernummer (via ELSTER). Essencial para comprar sem IVA na UE e faturar as reimportações.",
@@ -1199,6 +1211,9 @@ de: {
   'b.cta.sub':"Schreiben Sie uns per E-Mail, Antwort in unter 1 Arbeitsstunde.",
   'wa.msg':"Hallo KlarDrive, ich interessiere mich für",
   'wa.msg.end':"Ist es noch verfügbar?",
+  'v.sum':"{m} {mo}{ver} – Baujahr {y}, {km}, {f}, {b}, {p}. Geprüfte Historie, gültige HU, mindestens 12 Monate Garantie.",
+  'gear.auto':"Automatik",
+  'gear.man':"Schaltgetriebe",
   'form.email':"E-Mail",
   'form.email.ph':"sie@beispiel.de",
   'form.sending':"Wird gesendet…",

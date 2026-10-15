@@ -113,6 +113,30 @@ function promoBadge(v){
   }
   return '';
 }
+function fuelKey(f){ return {Essence:'filters.fuel.petrol',Diesel:'filters.fuel.diesel',Hybride:'filters.fuel.hybrid','Électrique':'filters.fuel.electric'}[f] || null; }
+function gearKey(g){ return {Automatique:'gear.auto',Manuelle:'gear.man'}[g] || null; }
+function vehSummary(v){
+  var fk = v.carburant ? fuelKey(v.carburant) : null;
+  var gk = v.boite ? gearKey(v.boite) : null;
+  var data = {
+    m: v.marque || '', mo: v.modele || '',
+    ver: v.version ? ' (' + v.version + ')' : '',
+    y: v.annee || _t('v.year.na', 'Année sur demande'),
+    km: v.km ? v.km.toLocaleString(_loc()) + ' km' : _t('v.km.na', 'Kilométrage sur demande'),
+    f: fk ? _t(fk, v.carburant) : (v.carburant || '—'),
+    b: gk ? _t(gk, v.boite) : (v.boite || '—'),
+    p: v.puissance || '—'
+  };
+  var tpl = _t('v.sum', '{m} {mo}{ver} – {y}, {km}, {f}, {b}, {p}.');
+  return tpl.replace('{m}', data.m).replace('{mo}', data.mo).replace('{ver}', data.ver)
+    .replace('{y}', data.y).replace('{km}', data.km).replace('{f}', data.f)
+    .replace('{b}', data.b).replace('{p}', data.p);
+}
+function vehDesc(v){
+  var l = 'fr'; try{ if(window.LBA_I18N) l = window.LBA_I18N.get(); }catch(e){}
+  if(l === 'fr' && v.desc) return v.desc;
+  return vehSummary(v);
+}
 function cardHTML(v){
   return `<div class="card veh-card" onclick="location.href='vehicule.html?id=${v.id}'" role="link" tabindex="0" onkeydown="if(event.key==='Enter')location.href='vehicule.html?id=${v.id}'"><img src="${v.img}" alt="${v.marque} ${v.modele}" loading="lazy">
   <div class="card-body"><span class="badge">${v.badge}</span><span class="badge blue">${v.cat}</span>${promoBadge(v)}

@@ -13,8 +13,7 @@
 <div class="lang-switcher"></div>
 <button class="burger" aria-label="menu"><svg class="ic" viewBox="0 0 24 24" style="width:26px;height:26px"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button></div></header>
 <section class="section"><div class="container">
-<p class="kicker"><span id="kicker-n">80</span> <span data-i18n="cat.kicker">véhicules disponibles</span></p>
-<h1 data-i18n="cat.title">Notre catalogue</h1><p class="sub" id="count"></p>
+<h1 data-i18n="cat.title">Notre catalogue</h1>
 <p><span class="badge promo" data-i18n="topbar.deals">−5 % sur tous nos véhicules</span></p>
 <div class="search-zone">
 <div class="search-bar">
@@ -24,7 +23,7 @@
 </div>
 <div class="quick-pills" id="quick-pills"></div>
 <div class="filters-row">
-<p class="sub" id="count"></p>
+
 <label class="sort-wrap"><span data-i18n="f.sortBy">Trier par</span><select id="sort"><option value="" data-i18n="filters.sort.rel">Trier : pertinence</option><option value="asc" data-i18n="filters.sort.asc">Prix croissant</option><option value="desc" data-i18n="filters.sort.desc">Prix décroissant</option><option value="km" data-i18n="filters.sort.km">Faible kilométrage</option><option value="year" data-i18n="filters.sort.year">Plus récent</option></select></label>
 </div>
 </div>
@@ -180,7 +179,7 @@ function render(){
   var sort = state.sort;
   if(sort==='asc') list.sort((a,b)=>a.prix-b.prix); if(sort==='desc') list.sort((a,b)=>b.prix-a.prix);
   if(sort==='km') list.sort((a,b)=>(a.km||9999999)-(b.km||9999999)); if(sort==='year') list.sort((a,b)=>(b.annee||0)-(a.annee||0));
-  document.getElementById('count').textContent = list.length+' '+T('cat.count');
+  var cc = document.getElementById('count'); if(cc) cc.textContent = list.length+' '+T('cat.count');
   var kn = document.getElementById('kicker-n'); if(kn) kn.textContent = list.length;
   document.getElementById('grid').innerHTML = list.map(cardHTML).join('') || '<p>'+T('cat.empty')+' <a href="contact.html">'+T('cat.empty.cta')+'</a>'+T('cat.empty.end')+'</p>';
   var fc = document.getElementById('fcount'), n = activeCount();

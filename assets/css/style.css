@@ -264,3 +264,16 @@ h2{font-size:clamp(1.7rem,3vw,2.4rem);margin:0 0 .6rem;font-weight:700}
 }
 @media(max-width:560px){.grid3,.veh-grid,.reviews,.services,.footer-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.nav-cta{display:none}.lang-switcher{margin-left:auto}.hero-grid{padding:3rem 0}.section{padding:3rem 0}.hero-single{padding:4rem 0}.hero::after{background:linear-gradient(180deg,rgba(7,22,51,.90) 0%,rgba(7,22,51,.60) 100%)}.hero-cta .btn{flex:1 1 100%;justify-content:center}.cta{padding:1.6rem}.topbar{font-size:.6rem;letter-spacing:.1em}.nav-cta{padding:.8rem .9rem}.veh-actions .btn{padding:.85rem .5rem;font-size:.8rem}}
 @media(max-width:380px){.brand img{height:34px}.nav-cta{font-size:.6rem;padding:.7rem .6rem}.nav{gap:.5rem}.lang-current{padding:.3rem .5rem;font-size:.66rem}.lang-current svg{width:18px;height:12px}}
+/* ---------- mobile : anti-zoom iOS + anti-débordement ---------- */
+body{overflow-x:clip}
+img,video,iframe{max-width:100%}
+@media(max-width:700px){
+  .search-bar input{font-size:1rem}
+  .sort-wrap select{font-size:1rem}
+  .fm-grid input,.fm-grid select{font-size:1rem}
+}
+@media(max-width:560px){
+  .doc table,.specimen table{font-size:.85rem}
+  .doc th,.doc td,.specimen td{padding:.45rem .5rem;overflow-wrap:anywhere}
+  .sig{grid-template-columns:1fr}
+}

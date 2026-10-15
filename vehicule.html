@@ -96,7 +96,7 @@ ${g.length>1?'<div class="gal-thumbs" id="gal-thumbs">'+g.map((u,j)=>`<button cl
 <h1>${v.marque} ${v.modele}</h1><p class="meta">${v.version||''}</p>${priceHTML(v)}
 <p class="meta">${T('v.from')} <b>${Math.round(v.prix/60).toLocaleString(loc())} ${T('v.permonth')}</b> · ${T('v.fin')}</p>
 <p class="live-line"><span class="dot"></span><b data-visitors>18</b>&nbsp;${T('v.viewing')}</p>
-<p class="desc">${v.desc||''}</p>
+<p class="desc">${vehDesc(v)}</p>
 <div class="specs"><div><b>${T('v.year')}</b><span>${an}</span></div><div><b>${T('v.km')}</b><span>${km}</span></div><div><b>${T('v.fuel')}</b><span>${v.carburant||'—'}</span></div><div><b>${T('v.gear')}</b><span>${v.boite||'—'}</span></div><div><b>${T('v.power')}</b><span>${v.puissance||'—'}</span></div><div><b>${T('v.control')}</b><span class="ok">250 points</span></div></div>
 <div class="hero-cta"><a class="btn btn-dark" href="${mailLink(v)}"><svg class="ic"><use href="#i-mail"/></svg>${T('cta.mail')}</a><a class="btn btn-ghost" style="color:#0A1E3C;border-color:#0A1E3C" href="bon-de-commande.html?id=${v.id}"><svg class="ic"><use href="#i-doc"/></svg>${T('v.order')}</a></div>
 <p class="meta" style="margin-top:1rem"><svg class="ic gold"><use href="#i-pin"/></svg> Bahnhofstraße, 61352 Bad Homburg vor der Höhe, Allemagne · <svg class="ic gold"><use href="#i-shield"/></svg> ${T('ser.war')} · <svg class="ic gold"><use href="#i-truck"/></svg> ${T('ser.del')}</p>
@@ -109,7 +109,7 @@ ${g.length>1?'<div class="gal-thumbs" id="gal-thumbs">'+g.map((u,j)=>`<button cl
 <button class="tab-btn" onclick="switchTab(4)">${T('v.tab5')}</button>
 <button class="tab-btn" onclick="switchTab(5)">${T('v.tab6')}</button>
 </div>
-<div class="tab-panel on"><p class="desc">${v.desc||''}</p><p class="meta"><span class="ok">${T('v.hist1')}</span> · <span class="ok">${T('v.hist2')}</span> · <span class="ok">${T('v.hist3')}</span></p></div>
+<div class="tab-panel on"><p class="desc">${vehDesc(v)}</p><p class="meta"><span class="ok">${T('v.hist1')}</span> · <span class="ok">${T('v.hist2')}</span> · <span class="ok">${T('v.hist3')}</span></p></div>
 <div class="tab-panel"><ul>${T('v.ctl.html')}</ul></div>
 <div class="tab-panel"><ul>${T('v.doc.html')}</ul></div>
 <div class="tab-panel"><ul>${T('v.del.html')}</ul></div>
