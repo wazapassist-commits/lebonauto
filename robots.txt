@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /modeles-officiels
+
+Sitemap: https://www.klardrive.de/sitemap.xml
