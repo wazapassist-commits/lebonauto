@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://www.klardrive.de/catalogue">
-<title data-i18n="meta.title.catalogue">Gebrauchtwagen-Katalog | KlarDrive Bad Homburg vor der Höhe/title>
+<title data-i18n="meta.title.catalogue">Gebrauchtwagen-Katalog | KlarDrive Bad Homburg vor der Höhe</title>
 <meta name="description" content="Gebrauchtwagen-Katalog KlarDrive Bad Homburg bei Frankfurt: SUV, Limousinen, E-Autos. Nach Preis, Kraftstoff, Baujahr filtern.">
 <link rel="icon" type="image/png" href="assets/img/logo.png?v=25">
 <link rel="stylesheet" href="assets/css/style.css?v=23"></head>
 <body>
-<div class="topbar"><span data-i18n="topbar.deals">Réductions exclusives</span> — <strong><span data-visitors>18</span> <span data-i18n="topbar.online">Besucher online/span></strong></div>
+<div class="topbar"><span data-i18n="topbar.deals">Réductions exclusives</span> — <strong><span data-visitors>18</span> <span data-i18n="topbar.online">Besucher online</span></strong></div>
 <header class="header"><div class="container nav">
 <a class="brand" href="index.html"><img src="assets/img/logo.png?v=25" alt="KlarDrive — Bad Homburg vor der Höhe"></a>
-<nav class="links"><a href="index.html" data-i18n="nav.home">Startseite/a><a class="active" href="catalogue.html" data-i18n="nav.catalogue">Katalog/a><a href="a-propos.html" data-i18n="nav.about">Über uns/a><a href="contact.html" data-i18n="nav.contact">Kontakt/a><a href="blog.html" data-i18n="nav.blog">Blog/a><a href="faq.html" data-i18n="nav.faq">FAQ/a></nav>
-<a class="btn btn-primary nav-cta" href="contact.html" data-i18n="nav.cta.contact">Kontaktieren Sie uns/a>
+<nav class="links"><a href="index.html" data-i18n="nav.home">Startseite</a><a class="active" href="catalogue.html" data-i18n="nav.catalogue">Katalog</a><a href="a-propos.html" data-i18n="nav.about">Über uns</a><a href="contact.html" data-i18n="nav.contact">Kontakt</a><a href="blog.html" data-i18n="nav.blog">Blog</a><a href="faq.html" data-i18n="nav.faq">FAQ</a></nav>
+<a class="btn btn-primary nav-cta" href="contact.html" data-i18n="nav.cta.contact">Kontaktieren Sie uns</a>
 <div class="lang-switcher"></div>
 <button class="burger" aria-label="menu"><svg class="ic" viewBox="0 0 24 24" style="width:26px;height:26px"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button></div></header>
 <section class="section"><div class="container">
-<h1 data-i18n="cat.title">Unser Katalog/h1>
-<p><span class="badge promo" data-i18n="topbar.deals">−5 % auf alle Fahrzeuge/span></p>
+<h1 data-i18n="cat.title">Unser Katalog</h1>
+<p><span class="badge promo" data-i18n="topbar.deals">−5 % auf alle Fahrzeuge</span></p>
 <div class="search-zone">
 <div class="search-bar">
 <svg class="ic"><use href="#i-search"/></svg>
 <input id="q" data-i18n-ph="filters.search" placeholder="Fahrzeug suchen…">
-<button class="btn btn-dark" id="filter-toggle" aria-expanded="false" data-i18n-aria="filters.title"><svg class="ic" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg><span data-i18n="filters.title">Filter/span><span class="fcount" id="fcount"></span></button>
+<button class="btn btn-dark" id="filter-toggle" aria-expanded="false" data-i18n-aria="filters.title"><svg class="ic" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg><span data-i18n="filters.title">Filter</span><span class="fcount" id="fcount"></span></button>
 </div>
 <div class="quick-pills" id="quick-pills"></div>
 <div class="filters-row">
 
-<label class="sort-wrap"><span data-i18n="f.sortBy">Sortieren/span><select id="sort"><option value="" data-i18n="filters.sort.rel">Sortieren: Relevanz/option><option value="asc" data-i18n="filters.sort.asc">Preis aufsteigend/option><option value="desc" data-i18n="filters.sort.desc">Preis absteigend/option><option value="km" data-i18n="filters.sort.km">Geringste Laufleistung/option><option value="year" data-i18n="filters.sort.year">Neueste/option></select></label>
+<label class="sort-wrap"><span data-i18n="f.sortBy">Sortieren</span><select id="sort"><option value="" data-i18n="filters.sort.rel">Sortieren: Relevanz</option><option value="asc" data-i18n="filters.sort.asc">Preis aufsteigend</option><option value="desc" data-i18n="filters.sort.desc">Preis absteigend</option><option value="km" data-i18n="filters.sort.km">Geringste Laufleistung</option><option value="year" data-i18n="filters.sort.year">Neueste</option></select></label>
 </div>
 </div>
 <div class="veh-grid" id="grid"></div>
 <div class="filters-modal-back" id="filters-modal">
 <div class="filters-modal" role="dialog" aria-modal="true" aria-labelledby="fm-title">
-<div class="fm-head"><h2 id="fm-title" data-i18n="filters.title">Filter/h2><button class="fm-close" id="fm-close" data-i18n-aria="f.close" aria-label="Fermer">×</button></div>
+<div class="fm-head"><h2 id="fm-title" data-i18n="filters.title">Filter</h2><button class="fm-close" id="fm-close" data-i18n-aria="f.close" aria-label="Fermer">×</button></div>
 <div class="fm-grid">
-<div><label class="flabel" for="f-marque" data-i18n="f.brand">Marke/label><select id="f-marque"></select></div>
-<div><label class="flabel" for="f-modele" data-i18n="f.model">Modell/label><select id="f-modele"></select></div>
-<div><label class="flabel" for="f-prix-min" data-i18n="f.priceMin">Mindestpreis/label><input id="f-prix-min" type="number" min="0" step="500" placeholder="€"></div>
-<div><label class="flabel" for="f-prix-max" data-i18n="f.priceMax">Höchstpreis/label><input id="f-prix-max" type="number" min="0" step="500" placeholder="€"></div>
-<div><label class="flabel" for="f-annee-min" data-i18n="f.yearMin">Mindestjahr/label><input id="f-annee-min" type="number" min="2000" max="2030" placeholder="AAAA"></div>
-<div><label class="flabel" for="f-annee-max" data-i18n="f.yearMax">Höchstjahr/label><input id="f-annee-max" type="number" min="2000" max="2030" placeholder="AAAA"></div>
-<div><label class="flabel" for="f-km-max" data-i18n="f.kmMax">Max. Laufleistung/label><input id="f-km-max" type="number" min="0" step="5000" placeholder="km"></div>
-<div class="full"><label class="flabel" data-i18n="f.fuel">Kraftstoff/label><div class="pill-group" id="f-fuels"></div></div>
-<div class="full"><label class="flabel" data-i18n="f.gear">Getriebe/label><div class="pill-group" id="f-gears"></div></div>
-<div class="full"><label class="flabel" data-i18n="f.body">Karosserieform/label><div class="pill-group" id="f-body"></div></div>
+<div><label class="flabel" for="f-marque" data-i18n="f.brand">Marke</label><select id="f-marque"></select></div>
+<div><label class="flabel" for="f-modele" data-i18n="f.model">Modell</label><select id="f-modele"></select></div>
+<div><label class="flabel" for="f-prix-min" data-i18n="f.priceMin">Mindestpreis</label><input id="f-prix-min" type="number" min="0" step="500" placeholder="€"></div>
+<div><label class="flabel" for="f-prix-max" data-i18n="f.priceMax">Höchstpreis</label><input id="f-prix-max" type="number" min="0" step="500" placeholder="€"></div>
+<div><label class="flabel" for="f-annee-min" data-i18n="f.yearMin">Mindestjahr</label><input id="f-annee-min" type="number" min="2000" max="2030" placeholder="AAAA"></div>
+<div><label class="flabel" for="f-annee-max" data-i18n="f.yearMax">Höchstjahr</label><input id="f-annee-max" type="number" min="2000" max="2030" placeholder="AAAA"></div>
+<div><label class="flabel" for="f-km-max" data-i18n="f.kmMax">Max. Laufleistung</label><input id="f-km-max" type="number" min="0" step="5000" placeholder="km"></div>
+<div class="full"><label class="flabel" data-i18n="f.fuel">Kraftstoff</label><div class="pill-group" id="f-fuels"></div></div>
+<div class="full"><label class="flabel" data-i18n="f.gear">Getriebe</label><div class="pill-group" id="f-gears"></div></div>
+<div class="full"><label class="flabel" data-i18n="f.body">Karosserieform</label><div class="pill-group" id="f-body"></div></div>
 </div>
 <div class="fm-foot">
-<button class="btn btn-outline" id="fm-reset" data-i18n="filters.reset">Zurücksetzen/button>
-<button class="btn btn-primary" id="fm-apply" data-i18n="f.apply">Filter anwenden/button>
+<button class="btn btn-outline" id="fm-reset" data-i18n="filters.reset">Zurücksetzen</button>
+<button class="btn btn-primary" id="fm-apply" data-i18n="f.apply">Filter anwenden</button>
 </div>
 </div>
 </div>
 </div></section>
 <footer class="footer"><div class="container footer-grid">
-<div><h4 data-i18n="footer.brand">KLARDRIVE/h4><p data-i18n="footer.desc">Ihr vertrauenswürdiger Partner für hochwertige Premium-Fahrzeuge. Über 6 Jahre Erfahrung./p><p><a href="mailto:contact@klardrive.de"><svg class="ic gold"><use href="#i-mail"/></svg> contact@klardrive.de</a><br><br><svg class="ic gold"><use href="#i-pin"/></svg> Bahnhofstraße, 61352 Bad Homburg vor der Höhe, Allemagne</p></div>
-<div><h4 data-i18n="footer.nav">Navigation/h4><p><a href="index.html" data-i18n="nav.home">Startseite/a><br><a href="catalogue.html" data-i18n="nav.catalogue">Katalog/a><br><a href="a-propos.html" data-i18n="nav.about">Über uns/a><br><a href="contact.html" data-i18n="nav.contact">Kontakt/a><br><a href="blog.html" data-i18n="nav.blog">Blog/a><br><a href="faq.html" data-i18n="nav.faq">FAQ/a><br><a href="bad-homburg.html" data-i18n="nav.bh">Bad Homburg/a></p></div>
-<div><h4 data-i18n="footer.hours">Öffnungszeiten/h4><p><span data-i18n="footer.h1">Mo – Fr: 9 – 18 Uhr/span><br><span data-i18n="footer.h2">Sa: nach Vereinbarung/span><br><span data-i18n="footer.h3">So: geschlossen/span></p></div>
-<div><h4 data-i18n="footer.contact">Schnellkontakt/h4><p><a class="btn btn-primary" href="contact.html" data-i18n="footer.quote">Angebot anfordern/a></p><p style="margin-top:.6rem"><a href="mailto:contact@klardrive.de"><svg class="ic gold"><use href="#i-mail"/></svg> contact@klardrive.de</a></p></div>
-</div><div class="container bottom"><span>© <span data-year>2026</span> KlarDrive — <span data-i18n="footer.rights">Alle Rechte vorbehalten./span></span><span><a href="#" data-i18n="footer.cgu">AGB/a> · <a href="#" data-i18n="footer.legal">Impressum/a></span></div></footer>
+<div><h4 data-i18n="footer.brand">KLARDRIVE</h4><p data-i18n="footer.desc">Ihr vertrauenswürdiger Partner für hochwertige Premium-Fahrzeuge. Über 6 Jahre Erfahrung.</p><p><a href="mailto:contact@klardrive.de"><svg class="ic gold"><use href="#i-mail"/></svg> contact@klardrive.de</a><br><br><svg class="ic gold"><use href="#i-pin"/></svg> Bahnhofstraße, 61352 Bad Homburg vor der Höhe, Allemagne</p></div>
+<div><h4 data-i18n="footer.nav">Navigation</h4><p><a href="index.html" data-i18n="nav.home">Startseite</a><br><a href="catalogue.html" data-i18n="nav.catalogue">Katalog</a><br><a href="a-propos.html" data-i18n="nav.about">Über uns</a><br><a href="contact.html" data-i18n="nav.contact">Kontakt</a><br><a href="blog.html" data-i18n="nav.blog">Blog</a><br><a href="faq.html" data-i18n="nav.faq">FAQ</a><br><a href="bad-homburg.html" data-i18n="nav.bh">Bad Homburg</a></p></div>
+<div><h4 data-i18n="footer.hours">Öffnungszeiten</h4><p><span data-i18n="footer.h1">Mo – Fr: 9 – 18 Uhr</span><br><span data-i18n="footer.h2">Sa: nach Vereinbarung</span><br><span data-i18n="footer.h3">So: geschlossen</span></p></div>
+<div><h4 data-i18n="footer.contact">Schnellkontakt</h4><p><a class="btn btn-primary" href="contact.html" data-i18n="footer.quote">Angebot anfordern</a></p><p style="margin-top:.6rem"><a href="mailto:contact@klardrive.de"><svg class="ic gold"><use href="#i-mail"/></svg> contact@klardrive.de</a></p></div>
+</div><div class="container bottom"><span>© <span data-year>2026</span> KlarDrive — <span data-i18n="footer.rights">Alle Rechte vorbehalten.</span></span><span><a href="#" data-i18n="footer.cgu">AGB</a> · <a href="#" data-i18n="footer.legal">Impressum</a></span></div></footer>
 <script src="assets/js/i18n.js?v=23"></script><script src="assets/js/sb-config.js?v=23"></script><script src="assets/js/sb.js?v=23"></script><script src="assets/js/vehicles.js?v=23"></script><script src="assets/js/main.js?v=23"></script>
 <script>
 function T(k){ try{ return window.LBA_I18N.t(k); }catch(e){ return k; } }
