@@ -17,7 +17,8 @@
 <div class="form">
 <form onsubmit="return handleContact(event)">
 <label data-i18n="form.name">Nom</label><input name="nom" required data-i18n-ph="form.name.ph" placeholder="Votre nom">
-<label data-i18n="form.tel">Téléphone</label><input name="tel" required placeholder="06 ...">
+<label data-i18n="form.email">E-mail</label><input name="email" type="email" required data-i18n-ph="form.email.ph" placeholder="vous@exemple.fr">
+<label data-i18n="form.tel">Téléphone</label><input name="tel" placeholder="06 ...">
 <label data-i18n="form.subject">Sujet</label><select name="sujet"><option data-i18n="subj.1">Acheter un véhicule</option><option data-i18n="subj.2">Financement</option><option data-i18n="subj.3">Livraison</option><option data-i18n="subj.4">Autre</option></select>
 <label data-i18n="form.msg">Message</label><textarea name="message" rows="4" data-i18n-ph="form.msg.ph" placeholder="Bonjour, je cherche..."></textarea>
 <button class="btn btn-dark" type="submit" style="width:100%;justify-content:center"><svg class="ic"><use href="#i-mail"/></svg><span data-i18n="form.send">Envoyer par e-mail</span></button>

@@ -9,7 +9,7 @@ var CATS = ['SUV', 'Berline', 'Monospace', 'Camping-car'];
 var FUELS = ['Essence', 'Diesel', 'Hybride', 'Électrique'];
 var GEARS = ['Automatique', 'Manuelle'];
 
-var data = { vehicles: [], blog: [] };   // données live (Supabase, sinon repli statique)
+var data = { vehicles: [], blog: [], messages: [] };   // données live (Supabase, sinon repli statique)
 var readonly = false;                     // vrai si Supabase injoignable (repli statique)
 var editing = null; // {kind:'veh'|'blog', id: string|'new'}
 
@@ -555,12 +555,65 @@ function doLogout(){
   location.reload();
 }
 
+
+// ---------- messagerie ----------
+function msgDate(m){
+  try { var d = new Date(m.created_at); return d.toLocaleDateString('fr-FR') + ' ' + ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2); }
+  catch (e) { return m.created_at || ''; }
+}
+async function loadMessages(){
+  try {
+    data.messages = await SB.selectAuthed('messages', 'created_at.desc');
+  } catch (e) {
+    data.messages = [];
+    toast('Messagerie injoignable : ' + e.message, true);
+  }
+  renderMessages();
+}
+function renderMessages(){
+  var list = (data.messages || []).slice();
+  var unread = list.filter(function(m){ return !m.lu; }).length;
+  var st = $('#st-msg'); if (st) st.textContent = unread;
+  var badge = $('#msg-badge');
+  if (badge) { badge.style.display = unread ? '' : 'none'; badge.textContent = unread; }
+  var box = $('#admin-msg-list');
+  if (!box) return;
+  box.innerHTML = list.map(function(m){
+    var head = '<h3>' + esc(m.nom || 'Sans nom') + ' <span style="font-weight:400;font-size:.8rem;color:var(--muted)">' + esc(msgDate(m)) + '</span></h3>'
+      + '<p class="meta"><b>' + esc(m.sujet || '—') + '</b> · ' + esc(m.email || '') + (m.tel ? ' · ' + esc(m.tel) : '') + '</p>'
+      + '<p>' + esc(m.message || '') + '</p>';
+    var style = m.lu ? '' : ' style="border-left:4px solid var(--gold)"';
+    return '<div class="blog-row"' + style + '><div class="grow">' + head + '</div>'
+      + '<a class="btn btn-dark" href="mailto:' + esc(m.email || '') + '?subject=' + encodeURIComponent('Re: KlarDrive - ' + (m.sujet || '')) + '">Répondre</a>'
+      + '<button class="btn btn-dark" data-mact="read" data-id="' + esc(m.id) + '">' + (m.lu ? 'Non lu' : 'Lu') + '</button>'
+      + '<button class="btn btn-whatsapp" data-mact="del" data-id="' + esc(m.id) + '">Supprimer</button>'
+      + '</div>';
+  }).join('') || '<p>Aucun message pour le moment.</p>';
+  $all('[data-mact]', box).forEach(function(b){
+    b.addEventListener('click', function(){ msgAction(b.getAttribute('data-mact'), b.getAttribute('data-id')); });
+  });
+}
+async function msgAction(act, id){
+  try {
+    if (act === 'read') {
+      var m = (data.messages || []).find(function(x){ return String(x.id) === String(id); });
+      await SB.upsert('messages', { id: id, lu: !(m && m.lu) });
+    } else if (act === 'del') {
+      if (!window.confirm('Supprimer ce message ?')) return;
+      await SB.remove('messages', 'id', id);
+    }
+    await loadMessages();
+  } catch (e) { toast('Action impossible : ' + e.message, true); }
+}
+
 // ---------- onglets / divers ----------
 function switchTab(name){
   $all('.admin-tab').forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-tab') === name); });
   $('#tab-veh').hidden = name !== 'veh';
   $('#tab-blog').hidden = name !== 'blog';
   $('#tab-cfg').hidden = name !== 'cfg';
+  $('#tab-msg').hidden = name !== 'msg';
+  if(name === 'msg') loadMessages();
 }
 
 function fillSb(){
@@ -578,7 +631,7 @@ async function boot(){
     var me = await SB.me();
     if (me && me.email) {
       hideOverlay();
-      await loadAll(); renderAll(); refreshSbStatus();
+      await loadAll(); renderAll(); refreshSbStatus(); loadMessages();
       toast('Connecté : ' + me.email);
       return;
     }
@@ -601,6 +654,7 @@ function bindStatic(){
   $('#veh-search').addEventListener('input', renderVehicles);
   $('#veh-new').addEventListener('click', function(){ openVehicleModal('new'); });
   $('#blog-new').addEventListener('click', function(){ openBlogModal('new'); });
+  var mr = $('#msg-reload'); if (mr) mr.addEventListener('click', loadMessages);
   $('#modal-cancel').addEventListener('click', closeModal);
   $('#modal-back').addEventListener('click', function(e){ if (e.target.id === 'modal-back') closeModal(); });
   $('#modal-save').addEventListener('click', saveModal);
