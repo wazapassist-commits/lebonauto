@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Maquettes documents officiels DE (SPECIMEN) | KlarDrive</title>
 <meta name="robots" content="noindex">
 <link rel="icon" type="image/png" href="assets/img/logo.png?v=25">
@@ -23,16 +23,16 @@
 <div class="topbar"><span>Documents internes</span> — <strong>Maquettes SPECIMEN (sans valeur officielle)</strong></div>
 <header class="header"><div class="container nav">
 <a class="brand" href="index.html"><img src="assets/img/logo.png?v=25" alt="KlarDrive — Bad Homburg vor der Höhe"></a>
-<nav class="links"><a href="index.html">Accueil</a><a href="catalogue.html">Catalogue</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a></nav>
-<a class="btn btn-primary nav-cta" href="catalogue.html">Voir nos véhicules</a>
+<nav class="links"><a href="index.html" data-i18n="nav.home">Startseite</a><a href="catalogue.html" data-i18n="nav.catalogue">Katalog</a><a href="a-propos.html" data-i18n="nav.about">Über uns</a><a href="contact.html" data-i18n="nav.contact">Kontakt</a><a href="blog.html" data-i18n="nav.blog">Blog</a><a href="faq.html" data-i18n="nav.faq">FAQ</a></nav>
+<a class="btn btn-primary nav-cta" href="catalogue.html" data-i18n="nav.cta.cars">Unsere Fahrzeuge ansehen</a>
 <div class="lang-switcher"></div>
 <button class="burger" aria-label="menu"><svg class="ic" viewBox="0 0 24 24" style="width:26px;height:26px"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button></div></header>
 
 <section class="section"><div class="container">
-<p class="kicker" data-reveal>Outils internes</p>
-<h1 data-reveal>À quoi ressemblent les documents officiels ?</h1>
-<p class="sub" data-reveal>Maquettes visuelles <b>non officielles</b> avec données fictives, pour reconnaître les vrais documents quand vous les recevrez. Ne jamais utiliser pour facturer ou signer.</p>
-<p class="noprint"><button class="btn btn-dark" onclick="window.print()">Imprimer les 3 maquettes</button></p>
+<p class="kicker" data-reveal data-i18n="mo.kicker">Interne Tools</p>
+<h1 data-reveal data-i18n="mo.title">Wie sehen die offiziellen Dokumente aus?</h1>
+<p class="sub" data-reveal data-i18n-html="mo.sub">Visuelle Muster, <b>nicht offiziell</b>, mit fiktiven Daten.</p>
+<p class="noprint"><button class="btn btn-dark" onclick="window.print()"><span data-i18n="mo.print">Die 3 Muster drucken</span></button></p>
 
 <!-- 1. HRB -->
 <div class="specimen">
@@ -47,7 +47,7 @@
 <tr><td class="k">6. Geschäftsführer</td><td>[Votre nom], geb. am [date], einzelvertretungsberechtigt</td></tr>
 <tr><td class="k">7. Rechtsverhältnisse</td><td>Gesellschaftsvertrag vom [date] · Letzte Eintragung : Erstanmeldung</td></tr>
 </table>
-<p>Obtenu après passage chez le <b>notaire</b>, qui dépose les statuts au tribunal. Délai 2 à 6 semaines. Vérifiable sur <b>handelsregister.de</b>.</p>
+<p data-i18n-html="mo.doc1">Nach dem <b>Notartermin</b> reicht der Notar die Satzung beim Gericht ein. Dauer 2–6 Wochen. Prüfbar auf <b>handelsregister.de</b>.</p>
 <span class="tampon">Amtsgericht · Beglaubigter Auszug (exemple)</span>
 </div>
 
@@ -62,7 +62,7 @@
 <tr><td class="k">Beginn</td><td>[date de démarrage]</td></tr>
 <tr><td class="k">Beschäftigte</td><td>[nombre, 0 si seul]</td></tr>
 </table>
-<p>Première démarche sur place : elle déclenche automatiquement l'envoi du questionnaire fiscal par le <b>Finanzamt</b>. Prévoir pièce d'identité + bail du local.</p>
+<p data-i18n-html="mo.doc2">Erster Schritt vor Ort: Er löst automatisch den Steuerfragebogen des <b>Finanzamts</b> aus. Ausweis + Mietvertrag mitbringen.</p>
 <span class="tampon">Gewerbeschein (exemple)</span>
 </div>
 
@@ -76,16 +76,16 @@
 <tr><td class="k">Umsatzsteuer-Identifikationsnummer</td><td><b>DE 999 999 999</b> – valable dans toute l'UE, vérifiable sur VIES</td></tr>
 <tr><td class="k">Gültig ab</td><td>[date d'attribution]</td></tr>
 </table>
-<p>Demande <b>en ligne et gratuite</b> sur le site du BZSt après réception du Steuernummer (via ELSTER). Indispensable pour acheter HT en UE et facturer vos reimports.</p>
+<p data-i18n-html="mo.doc3"><b>Kostenloser Online-Antrag</b> auf der BZSt-Website nach Erhalt der Steuernummer (via ELSTER). Unerlässlich für Netto-Einkäufe in der EU und Ihre Reimport-Abrechnung.</p>
 <span class="tampon">BZSt · Vergabebescheid (exemple)</span>
 </div>
 
-<p class="meta">Ordre réel des démarches : 1) notaire + Gewerbe-Anmeldung → 2) Finanzamt (Steuernummer via ELSTER) → 3) BZSt (USt-IdNr.) → 4) HRB publié. Un Steuerberater local (~100–200 €/mois) pilote tout cela.</p>
+<p class="meta" data-i18n="mo.order">Tatsächliche Reihenfolge: 1) Notar + Gewerbeanmeldung → 2) Finanzamt (Steuernummer via ELSTER) → 3) BZSt (USt-IdNr.) → 4) HRB veröffentlicht. Ein Steuerberater vor Ort (~100–200 €/Monat) übernimmt alles.</p>
 </div></section>
 
 <footer class="footer"><div class="container footer-grid">
-<div><h4>KLARDRIVE</h4><p>Outils internes — documents sans valeur officielle.</p></div>
-<div><h4>Navigation</h4><p><a href="index.html">Accueil</a><br><a href="bon-de-commande.html">Bon de commande</a></p></div>
+<div><h4 data-i18n="footer.brand">KLARDRIVE</h4><p data-i18n="mo.footoff">Interne Tools — Dokumente ohne amtlichen Wert.</p></div>
+<div><h4 data-i18n="footer.nav">Navigation</h4><p><a href="index.html" data-i18n="nav.home">Startseite</a><br><a href="bon-de-commande.html" data-i18n="v.order">Bestellformular</a></p></div>
 </div><div class="container bottom"><span>© <span data-year>2026</span> KlarDrive.</span></div></footer>
 <script src="assets/js/i18n.js?v=22"></script>
 <script src="assets/js/main.js?v=22"></script>

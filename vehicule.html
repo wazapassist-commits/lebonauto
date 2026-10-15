@@ -89,8 +89,8 @@ gi = 0;
 document.getElementById('detail').innerHTML = `
 <div class="detail"><div>
 <div class="gal-main"><img id="gal-img" src="${g[0]}" alt="${v.marque} ${v.modele}">
-${g.length>1?'<button class="gal-arrow left" onclick="galMove(-1)" aria-label="précédent">‹</button><button class="gal-arrow right" onclick="galMove(1)" aria-label="suivant">›</button><span class="gal-count" id="gal-count">1 / '+g.length+'</span>':''}</div>
-${g.length>1?'<div class="gal-thumbs" id="gal-thumbs">'+g.map((u,j)=>`<button class="${j===0?'on':''}" onclick="galShow(${j})" aria-label="Photo ${j+1}"><img src="${u}" alt="${v.marque} ${v.modele} photo ${j+1}" loading="lazy"></button>`).join('')+'</div>':''}
+${g.length>1?'<button class="gal-arrow left" onclick="galMove(-1)" aria-label="'+T('v.prev')+'">‹</button><button class="gal-arrow right" onclick="galMove(1)" aria-label="'+T('v.next')+'">›</button><span class="gal-count" id="gal-count">1 / '+g.length+'</span>':''}</div>
+${g.length>1?'<div class="gal-thumbs" id="gal-thumbs">'+g.map((u,j)=>`<button class="${j===0?'on':''}" onclick="galShow(${j})" aria-label="'+T('v.photo')+' '+(j+1)+'"><img src="${u}" alt="${v.marque} ${v.modele} photo ${j+1}" loading="lazy"></button>`).join('')+'</div>':''}
 </div>
 <div><span class="badge">${v.badge}</span><span class="badge green">${T('v.available')}</span>
 <h1>${v.marque} ${v.modele}</h1><p class="meta">${v.version||''}</p>${priceHTML(v)}
@@ -99,7 +99,7 @@ ${g.length>1?'<div class="gal-thumbs" id="gal-thumbs">'+g.map((u,j)=>`<button cl
 <p class="desc">${v.desc||''}</p>
 <div class="specs"><div><b>${T('v.year')}</b><span>${an}</span></div><div><b>${T('v.km')}</b><span>${km}</span></div><div><b>${T('v.fuel')}</b><span>${v.carburant||'—'}</span></div><div><b>${T('v.gear')}</b><span>${v.boite||'—'}</span></div><div><b>${T('v.power')}</b><span>${v.puissance||'—'}</span></div><div><b>${T('v.control')}</b><span class="ok">250 points</span></div></div>
 <div class="hero-cta"><a class="btn btn-dark" href="${mailLink(v)}"><svg class="ic"><use href="#i-mail"/></svg>${T('cta.mail')}</a><a class="btn btn-ghost" style="color:#0A1E3C;border-color:#0A1E3C" href="bon-de-commande.html?id=${v.id}"><svg class="ic"><use href="#i-doc"/></svg>${T('v.order')}</a></div>
-<p class="meta" style="margin-top:1rem"><svg class="ic gold"><use href="#i-pin"/></svg> Bahnhofstraße, 61352 Bad Homburg vor der Höhe, Allemagne · <svg class="ic gold"><use href="#i-shield"/></svg> Garantie 12 mois min · <svg class="ic gold"><use href="#i-truck"/></svg> Livraison 3-5 j</p>
+<p class="meta" style="margin-top:1rem"><svg class="ic gold"><use href="#i-pin"/></svg> Bahnhofstraße, 61352 Bad Homburg vor der Höhe, Allemagne · <svg class="ic gold"><use href="#i-shield"/></svg> ${T('ser.war')} · <svg class="ic gold"><use href="#i-truck"/></svg> ${T('ser.del')}</p>
 </div></div>
 <div class="tabs">
 <button class="tab-btn on" onclick="switchTab(0)">${T('v.tab1')}</button>
