@@ -111,7 +111,8 @@ function T(k){ try{ return window.LBA_I18N.t(k); }catch(e){ return k; } }
 var DE_PREMIUM = ['Porsche','Mercedes-Benz','Mercedes','BMW','Audi','Volkswagen'];
 function renderBH(){
   var nowY = new Date().getFullYear();
-  var recents = VEHICLES.filter(function(v){ return v.annee && v.annee >= nowY - 3; });
+  var isSold = function(v){ return /verkauft|vendu/i.test(v.badge || ''); };
+  var recents = VEHICLES.filter(function(v){ return !isSold(v) && v.annee && v.annee >= nowY - 3; });
   function prem(v){ return DE_PREMIUM.indexOf(v.marque) >= 0 ? 0 : 1; }
   recents.sort(function(a,b){
     if(prem(a) !== prem(b)) return prem(a) - prem(b);
@@ -121,7 +122,7 @@ function renderBH(){
   });
   var list = recents.slice(0, 6);
   if(list.length < 6){
-    var rest = VEHICLES.filter(function(v){ return list.indexOf(v) < 0; })
+    var rest = VEHICLES.filter(function(v){ return !isSold(v) && list.indexOf(v) < 0; })
       .sort(function(a,b){ return (b.annee || 0) - (a.annee || 0); });
     list = list.concat(rest.slice(0, 6 - list.length));
   }

@@ -242,3 +242,12 @@ update vehicles set prix_barre=10000, prix=9500 where id='mercedes-benz-gle-450-
 update vehicles set prix_barre=6000, prix=5700 where id='toyota-land-cruiser-prado-gxr';
 update vehicles set prix_barre=4500, prix=4280 where id='volvo-xc60-ultimate-t8-dark-recharge-awd';
 update vehicles set prix_barre=3000, prix=2850 where id='bmw-x1-xdrive18d';
+update vehicles set badge='Verkauft' where id='toyota-land-cruiser-prado-gxr';
+update vehicles set badge='Verkauft' where id='volvo-xc60-ultimate-t8-dark-recharge-awd';
+update vehicles set badge='Verkauft' where id='mercedes-benz-gle-450-amg';
+update vehicles set badge='Verkauft' where id='opel-grandland-x';
+update vehicles set badge='Verkauft' where id='ford-transit-2-0-tdci';
+update vehicles set badge='Verkauft' where id='volkswagen-amarok-3-0-tdi-v6-aventura';
+update vehicles set badge='Verkauft' where id='audi-a3-30-tfsi-limousine';
+update vehicles set badge='Verkauft' where id='volkswagen-scirocco';
+update vehicles set badge='Verkauft' where id='bmw-x1-xdrive18d';

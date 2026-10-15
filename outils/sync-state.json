@@ -1,0 +1,268 @@
+{
+  "date": "2026-10-15",
+  "liveSlugs": [
+    "toyota-corolla-touring-hybrid",
+    "lexus-nx-300h-executive",
+    "toyota-rav4-hybrid-dynamic",
+    "tesla-model-y-grande-autonomie",
+    "bmw-x1-sdrive16d-lounge",
+    "bmw-x4-xdrive30d-m-sport",
+    "bmw-120d-m-sport-xdrive",
+    "mercedes-glc-coupe-220d-amg",
+    "mercedes-glb-200d-amg-7places",
+    "mercedes-classe-v-300",
+    "mercedes-classe-v-300-long",
+    "volkswagen-tiguan-r-line-tdi",
+    "toyota-c-hr-gr-sport",
+    "porsche-macan-2022",
+    "nissan-x-trail-epower",
+    "volvo-xc90-t8-recharge",
+    "suzuki-jimny-4places",
+    "toyota-rav4-hybrid-218",
+    "bmw-ix3-inspiring",
+    "cupra-formentor-vz-hybrid",
+    "fiat-etrusco-t7400-camping-car",
+    "audi-q3-sportback-tdi",
+    "renault-captur-tce",
+    "bmw-serie-2-gran-coupe",
+    "bmw-ix3-2022-2",
+    "mercedes-cla-250e-amg",
+    "mercedes-classe-a-200",
+    "audi-a3-limousine-tfsi",
+    "renault-megane-blue-dci"
+  ],
+  "vehicles": [
+    {
+      "slug": "toyota-corolla-touring-hybrid",
+      "brand": "Toyota",
+      "model": "Corolla Touring Sports Hybride",
+      "price": 14500,
+      "year": "2021",
+      "km": "103.000 km"
+    },
+    {
+      "slug": "lexus-nx-300h-executive",
+      "brand": "Lexus",
+      "model": "NX 300h Executive 4WD",
+      "price": 16500,
+      "year": "2018",
+      "km": "65.200 km"
+    },
+    {
+      "slug": "toyota-rav4-hybrid-dynamic",
+      "brand": "Toyota",
+      "model": "RAV4 2.5 Hybrid Dynamic AWD",
+      "price": 17500,
+      "year": "2020",
+      "km": "75.000 km"
+    },
+    {
+      "slug": "tesla-model-y-grande-autonomie",
+      "brand": "Tesla",
+      "model": "Model Y AWD Grande Autonomie",
+      "price": 25500,
+      "year": "2022",
+      "km": "34.000 km"
+    },
+    {
+      "slug": "bmw-x1-sdrive16d-lounge",
+      "brand": "BMW",
+      "model": "X1 sDrive16d Lounge",
+      "price": 20790,
+      "year": "2020",
+      "km": "75.000 km"
+    },
+    {
+      "slug": "bmw-x4-xdrive30d-m-sport",
+      "brand": "BMW",
+      "model": "X4 xDrive30d M Sport",
+      "price": 22500,
+      "year": "2020",
+      "km": "142.000 km"
+    },
+    {
+      "slug": "bmw-120d-m-sport-xdrive",
+      "brand": "BMW",
+      "model": "1er 120d M Sport xDrive",
+      "price": 19500,
+      "year": "2023",
+      "km": "45.000 km"
+    },
+    {
+      "slug": "mercedes-glc-coupe-220d-amg",
+      "brand": "Mercedes-Benz",
+      "model": "GLC Coupé 220 d AMG Line",
+      "price": 26500,
+      "year": "2020",
+      "km": "110.000 km"
+    },
+    {
+      "slug": "mercedes-glb-200d-amg-7places",
+      "brand": "Mercedes-Benz",
+      "model": "GLB 200 d AMG Line 7 Plätze",
+      "price": 22500,
+      "year": "2021",
+      "km": "80.000 km"
+    },
+    {
+      "slug": "mercedes-classe-v-300",
+      "brand": "Mercedes-Benz",
+      "model": "Classe V 300",
+      "price": 33500,
+      "year": "2022",
+      "km": "91.000 km"
+    },
+    {
+      "slug": "mercedes-classe-v-300-long",
+      "brand": "Mercedes-Benz",
+      "model": "Classe V 300 Extra Long",
+      "price": 35500,
+      "year": "2022",
+      "km": "95.000 km"
+    },
+    {
+      "slug": "volkswagen-tiguan-r-line-tdi",
+      "brand": "Volkswagen",
+      "model": "Tiguan 2.0 TDI R-Line",
+      "price": 18500,
+      "year": "2021",
+      "km": "75.000 km"
+    },
+    {
+      "slug": "toyota-c-hr-gr-sport",
+      "brand": "Toyota",
+      "model": "C-HR GR Sport Hybrid",
+      "price": 16500,
+      "year": "2023",
+      "km": "71.000 km"
+    },
+    {
+      "slug": "porsche-macan-2022",
+      "brand": "Porsche",
+      "model": "Macan 2022",
+      "price": 43500,
+      "year": "2022",
+      "km": "43.000 km"
+    },
+    {
+      "slug": "nissan-x-trail-epower",
+      "brand": "Nissan",
+      "model": "X-Trail e-Power",
+      "price": 18500,
+      "year": "2023",
+      "km": "47.500 km"
+    },
+    {
+      "slug": "volvo-xc90-t8-recharge",
+      "brand": "Volvo",
+      "model": "XC90 T8 Recharge",
+      "price": 22500,
+      "year": "2020",
+      "km": "90.000 km"
+    },
+    {
+      "slug": "suzuki-jimny-4places",
+      "brand": "Suzuki",
+      "model": "Jimny 4 Places",
+      "price": 15500,
+      "year": "2019",
+      "km": "80.000 km"
+    },
+    {
+      "slug": "toyota-rav4-hybrid-218",
+      "brand": "Toyota",
+      "model": "RAV4 Hybrid 218",
+      "price": 18500,
+      "year": "2021",
+      "km": "75.000 km"
+    },
+    {
+      "slug": "bmw-ix3-inspiring",
+      "brand": "BMW",
+      "model": "iX3 Inspiring",
+      "price": 26500,
+      "year": "2022",
+      "km": "60.000 km"
+    },
+    {
+      "slug": "cupra-formentor-vz-hybrid",
+      "brand": "Cupra",
+      "model": "Formentor VZ e-Hybrid 245",
+      "price": 19500,
+      "year": "2022",
+      "km": "60.000 km"
+    },
+    {
+      "slug": "fiat-etrusco-t7400-camping-car",
+      "brand": "Fiat",
+      "model": "Etrusco T 7400 QBC Camping-Car",
+      "price": 36000,
+      "year": "2023",
+      "km": "34.000 km"
+    },
+    {
+      "slug": "audi-q3-sportback-tdi",
+      "brand": "Audi",
+      "model": "Q3 Sportback 35 TDI Business",
+      "price": 29990,
+      "year": "2021",
+      "km": "70.000 km"
+    },
+    {
+      "slug": "renault-captur-tce",
+      "brand": "Renault",
+      "model": "Captur 0.9 TCe Business",
+      "price": 13800,
+      "year": "2020",
+      "km": "80.000 km"
+    },
+    {
+      "slug": "bmw-serie-2-gran-coupe",
+      "brand": "BMW",
+      "model": "2er Gran Coupé 218i M Sport",
+      "price": 17900,
+      "year": "2021",
+      "km": "70.000 km"
+    },
+    {
+      "slug": "bmw-ix3-2022-2",
+      "brand": "BMW",
+      "model": "iX3 Inspiring",
+      "price": 27500,
+      "year": "2022",
+      "km": "60.000 km"
+    },
+    {
+      "slug": "mercedes-cla-250e-amg",
+      "brand": "Mercedes-Benz",
+      "model": "CLA Shooting Brake 250 e AMG Line",
+      "price": 29580,
+      "year": "2021",
+      "km": "65.000 km"
+    },
+    {
+      "slug": "mercedes-classe-a-200",
+      "brand": "Mercedes-Benz",
+      "model": "Classe A 200 7G-DCT",
+      "price": 17590,
+      "year": "2020",
+      "km": "75.000 km"
+    },
+    {
+      "slug": "audi-a3-limousine-tfsi",
+      "brand": "Audi",
+      "model": "A3 Limousine 35 TFSI Sport",
+      "price": 21690,
+      "year": "2021",
+      "km": "70.000 km"
+    },
+    {
+      "slug": "renault-megane-blue-dci",
+      "brand": "Renault",
+      "model": "Mégane 1.5 Blue dCi Evolution",
+      "price": 15900,
+      "year": "2021",
+      "km": "75.000 km"
+    }
+  ]
+}
