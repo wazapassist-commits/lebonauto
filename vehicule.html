@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://www.klardrive.de/vehicule">
-<title>Fiche véhicule | KlarDrive</title><meta name="description" content="Gebrauchtwagen bei KlarDrive Bad Homburg: geprüft, garantiert, finanzierbar, Lieferung in 5 Tagen."><link rel="icon" type="image/png" href="assets/img/logo.png?v=25">
+<title>Fiche véhicule | KlarDrive</title><meta name="description" content="Gebrauchtwagen bei KlarDrive Bad Homburg: geprüft, garantiert, finanzierbar, Lieferung in 5 Tagen.">
+<script id="car-ld" type="application/ld+json">{}</script><link rel="icon" type="image/png" href="assets/img/logo.png?v=25">
 <link rel="stylesheet" href="assets/css/style.css?v=23">
 <style>
 .gal-main{position:relative;min-width:0}
@@ -85,6 +86,23 @@ function renderDetail(){
 resolveV();
 document.title = `${v.marque} ${v.modele} — ${fmt(v.prix)} | KlarDrive`;
 (function(){ var m=document.querySelector('meta[name="description"]'); if(m) m.setAttribute('content', (v.marque+' '+v.modele+' '+(v.annee||'')+' – '+fmt(v.prix)+' | KlarDrive Bad Homburg, geprüft mit Garantie').slice(0,160)); })();
+(function(){
+  var sold = /verkauft|vendu/i.test(v.badge || '');
+  var fuelMap = {Essence:'Petrol',Diesel:'Diesel',Hybride:'Hybrid','Électrique':'Electric'};
+  var gearMap = {Automatique:'Automatic',Manuelle:'Manual'};
+  var ld = {"@context":"https://schema.org","@type":"Car","name":v.marque+' '+v.modele,
+    "brand":{"@type":"Brand","name":v.marque},"model":v.modele,
+    "image":[(v.gallery&&v.gallery.length?v.gallery:[v.img]).slice(0,5)],
+    "vehicleModelDate":v.annee||undefined,
+    "mileageFromOdometer":{"@type":"QuantitativeValue","value":v.km||undefined,"unitCode":"KMT"},
+    "fuelType":fuelMap[v.carburant]||v.carburant||undefined,
+    "vehicleTransmission":gearMap[v.boite]||v.boite||undefined,
+    "description":(v.desc||'').slice(0,300),
+    "offers":{"@type":"Offer","price":v.prix,"priceCurrency":"EUR",
+      "availability":sold?"https://schema.org/OutOfStock":"https://schema.org/InStock"}};
+  var el = document.getElementById('car-ld');
+  if(el) el.textContent = JSON.stringify(ld);
+})();
 const an = v.annee || T('v.year.na');
 const km = v.km ? v.km.toLocaleString(loc())+' km' : T('v.km.na');
 gi = 0;
