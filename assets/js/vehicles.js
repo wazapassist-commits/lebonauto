@@ -147,10 +147,16 @@ function cardHTML(v){
 }
 // Données live Supabase (repli statique intégré si hors ligne / non configuré)
 (function(){
+  // Corrections tarifaires prioritaires : elles restent appliquées après le chargement Supabase.
+  // Cela évite qu'une ancienne valeur distante ne remplace brièvement le prix affiché.
+  var PRICE_OVERRIDES = {
+    'peugeot-208-gt-pack': { prix: 2500, prix_barre: 5000 }
+  };
   function mapV(r){
+    var override = PRICE_OVERRIDES[r.id] || {};
     return {id:r.id, gallery:Array.isArray(r.gallery)?r.gallery:[], marque:r.marque||'', modele:r.modele||'',
-      version:r.version||'', prix:Number(r.prix)||0,
-       prix_barre:(r.prix_barre==null||r.prix_barre==='')?null:Number(r.prix_barre),
+      version:r.version||'', prix:override.prix != null ? override.prix : (Number(r.prix)||0),
+       prix_barre:override.prix_barre != null ? override.prix_barre : ((r.prix_barre==null||r.prix_barre==='')?null:Number(r.prix_barre)),
       annee:(r.annee==null||r.annee==='')?null:Number(r.annee),
       km:(r.km==null||r.km==='')?null:Number(r.km),
       carburant:r.carburant||'', boite:r.boite||'', puissance:r.puissance||'',
