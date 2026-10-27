@@ -150,7 +150,7 @@ function cardHTML(v){
   // Corrections tarifaires prioritaires : elles restent appliquées après le chargement Supabase.
   // Cela évite qu'une ancienne valeur distante ne remplace brièvement le prix affiché.
   var PRICE_OVERRIDES = {
-    'peugeot-208-gt-pack': { prix: 2500, prix_barre: 5000, km: 61094 }
+    'peugeot-208-gt-pack': { prix: 3090, prix_barre: 5000, km: 61094 }
   };
   function mapV(r){
     var override = PRICE_OVERRIDES[r.id] || {};
